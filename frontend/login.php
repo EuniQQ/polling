@@ -54,8 +54,9 @@
         }
 
         .jumbotron {
-            background-color: rgb(255, 239, 148);
+            background-color: rgb(207, 200, 2);
             height: 180px;
+            width:1065px;
         }
     </style>
 </head>
@@ -89,9 +90,9 @@
                 <!-- 送出表單 -->
                 <div class="form-group text-center mt-4">
                 <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i></i> 送出表單</button> -->
-                <button type="reset" class="btn btn-outline-danger mr-5 btn-lg"><i class="far fa-paper-plane"></i>
+                <button type="reset" class="btn btn-outline-secondary mr-5 btn-lg"><i class="far fa-paper-plane"></i>
                     重置</button>
-                <button type="submit" class="btn btn-danger btn-lg"><a href="./login.php"></a>會員登入</button>
+                <button type="submit" class="btn btn-secondary btn-lg"><a href="./login.php"></a>會員登入</button>
                 </div>
           
 

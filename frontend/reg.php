@@ -56,6 +56,7 @@
         .jumbotron {
             background-color: rgb(255, 239, 148);
             height: 200px;
+            width:1065px;
         }
     </style>
 </head>
@@ -63,7 +64,7 @@
 <body>
 
     <!-- 頁首 -->
-    <div class="jumbotron text-center ">
+    <div class="jumbotron text-center md-0">
         <h1 class="text-center font-weight-bold">- 註冊會員 -</h1>
         <h3>Register</h3>
     </div>
