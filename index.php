@@ -9,7 +9,7 @@
     <style>
 *{
     box-sizing:border-box;
-    overflow:hidden;
+    /* overflow:scroll; */
     margin:0;
 
 }
@@ -50,8 +50,8 @@ if(isset($_SESSION['user'])){
 ?>
 <div class="clearfix">
   <a class="btn btn-lg btn-warning ml-3 my-3 float-left" href="?do=login">會員登入</a>
-  <a class="btn btn-lg btn-info ml-2 my-3 float-left" href="?do=reg">註冊新會員</a>
-  <!-- <a class="btn btn-lg btn-info ml-2 my-3" href="./frontend/reg.php">註冊新會員</a> -->
+  <a class="btn btn-lg btn-info ml-2 my-3 float-left" href="?do=reg">註冊會員</a>
+ 
 </span>
 <?php
 }

@@ -49,14 +49,15 @@
         }
 
         .form-check-input {
-            height: 35px;
-            width: 35px;
+            height: 30px;
+            width: 30px;
         }
 
         .jumbotron {
-            background-color: rgb(207, 200, 2);
+            background-color: rgb(143, 195, 251);
             height: 180px;
             width:1065px;
+            
         }
     </style>
 </head>
@@ -64,34 +65,32 @@
 <body>
 
     <!-- 頁首 -->
-    <div class="jumbotron text-center ">
-        <h1 class="text-center font-weight-bold" >- 會員登入 -</h1>
-        <h3>Login</h3>
+    <div class="jumbotron container row text-center">     
+        <h1 class="text-center font-weight-bold mx-auto">- 會員登入 -</h1>
+        <!-- <h3 class="text-center font-weight-bold  mx-auto"> Register</h3>       -->
     </div>
-
     <form action="../api/check_login.php" method="post" id="loginForm">
         <div class="container">
 
             <div class="row">
-                <!-- 左半邊欄位 -->
                 <div class="form-group col-sm-6 mx-auto">
 
                     <!-- 帳號 -->
                     <label for="account" class="label  col-form-label ">帳號 account：</label>
                     <input type="text" class="col form-cotrol" id="account" name="account" value="">
 
-                    <!-- mail -->
-                    <label for="password" class="label col-form-label ">密碼 password：</label>
+                    <!-- 密碼 -->
+                    <label for="password" class="label col-form-label mt-5">密碼 password：</label>
                     <input type="password" class="col form-cotrol " id="password" name="password" value="">
  
                 </div>
             </div>
         </div>
                 <!-- 送出表單 -->
-                <div class="form-group text-center mt-4">
+                <div class="form-group text-center mt-5">
                 <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i></i> 送出表單</button> -->
                 <button type="reset" class="btn btn-outline-secondary mr-5 btn-lg"><i class="far fa-paper-plane"></i>
-                    重置</button>
+                    忘記密碼</button>
                 <button type="submit" class="btn btn-secondary btn-lg"><a href="./login.php"></a>會員登入</button>
                 </div>
           

@@ -49,24 +49,27 @@
         }
 
         .form-check-input {
-            height: 35px;
-            width: 35px;
+            height: 30px;
+            width: 30px;
         }
 
         .jumbotron {
             background-color: rgb(255, 239, 148);
-            height: 200px;
+            height: 180px;
             width:1065px;
+            
         }
+
+        
     </style>
 </head>
 
 <body>
 
     <!-- 頁首 -->
-    <div class="jumbotron text-center md-0">
-        <h1 class="text-center font-weight-bold">- 註冊會員 -</h1>
-        <h3>Register</h3>
+    <div class="jumbotron container row text-center">     
+        <h1 class="text-center font-weight-bold mx-auto">- 註冊會員 -</h1>
+        <!-- <h3 class="text-center font-weight-bold  mx-auto"> Register</h3>       -->
     </div>
 
     <form action="../api/reg.php" method="post" id="regForm">
@@ -75,6 +78,13 @@
             <div class="row">
                 <!-- 左半邊欄位 -->
                 <div class="form-group col-sm-6 mx-auto">
+                    <!-- 帳號 -->
+                    <label for="account" class="label col-form-label ">帳號 Account：</label>
+                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入手機號碼 ex.0988-******">
+
+                    <!-- 生日 -->
+                    <label for="password" class="label  col-form-label ">密碼 password：</label>
+                    <input type="password" class="col form-cotrol" id="password" name="password" value="" placeholder="請輸入4-8碼中英文，請注意大小寫英文">
 
                     <label for="fname" class="label col-form-label ">姓名 Name：</label>
                     <input type="text" class="col form-cotrol " id="fname" name="fname" value="">

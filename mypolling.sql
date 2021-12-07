@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-12-05 14:59:25
+-- 產生時間： 2021-12-07 15:21:32
 -- 伺服器版本： 10.4.21-MariaDB
 -- PHP 版本： 7.4.23
 
@@ -34,6 +34,15 @@ CREATE TABLE `options` (
   `count` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='vote投票系統';
 
+--
+-- 傾印資料表的資料 `options`
+--
+
+INSERT INTO `options` (`id`, `opt`, `topic_id`, `count`) VALUES
+(1, '', 0, 0),
+(2, '', 0, 0),
+(3, '', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +53,14 @@ CREATE TABLE `topics` (
   `id` int(11) UNSIGNED NOT NULL,
   `topic` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `topics`
+--
+
+INSERT INTO `topics` (`id`, `topic`) VALUES
+(1, '明天上學嗎'),
+(2, '晚餐吃甚麼?');
 
 -- --------------------------------------------------------
 
@@ -58,7 +75,7 @@ CREATE TABLE `users` (
   `email` int(11) NOT NULL,
   `name` int(11) NOT NULL,
   `gender` int(11) NOT NULL,
-  `birthday` int(11) NOT NULL
+  `birthday` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci COMMENT='會員註冊資料';
 
 --
@@ -91,13 +108,13 @@ ALTER TABLE `users`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `options`
 --
 ALTER TABLE `options`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users`
