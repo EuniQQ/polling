@@ -20,6 +20,7 @@
         .col {
             height: 80px;
             border-radius: 50px;
+            width:500px;
             font-size: larger;
             color: lightslategray;
             border-color: rgb(26, 25, 25);
@@ -72,30 +73,30 @@
         <!-- <h3 class="text-center font-weight-bold  mx-auto"> Register</h3>       -->
     </div>
 
-    <form action="../api/reg.php" method="post" id="regForm">
+    <form action="./api/reg.php" method="post" id="regForm">
         <div class="container">
 
-            <div class="row">
+            <div class="row ">
                 <!-- 左半邊欄位 -->
-                <div class="form-group col-sm-6 mx-auto">
+                <div class="form-group col-sm-6 text-center ml-5">
                     <!-- 帳號 -->
-                    <label for="account" class="label col-form-label ">帳號 Account：</label>
-                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入手機號碼 ex.0988-******">
+                    <label for="account" class="label col-form-label">帳號 Account：</label><br>
+                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入手機號碼 ex.0988-******"><br>
 
                     <!-- 生日 -->
-                    <label for="password" class="label  col-form-label ">密碼 password：</label>
-                    <input type="password" class="col form-cotrol" id="password" name="password" value="" placeholder="請輸入4-8碼中英文，請注意大小寫英文">
+                    <label for="password" class="label  col-form-label ">密碼 password：</label><br>
+                    <input type="password" class="col form-cotrol" id="password" name="password" value="" placeholder="請輸入4-8碼中英文，請注意大小寫英文"><br>
 
-                    <label for="fname" class="label col-form-label ">姓名 Name：</label>
-                    <input type="text" class="col form-cotrol " id="fname" name="fname" value="">
+                    <label for="fname" class="label col-form-label ">姓名 Name：</label><br>
+                    <input type="text" class="col form-cotrol " id="name" name="name" value=""><br>
 
                     <!-- 生日 -->
-                    <label for="birthday" class="label  col-form-label ">生日 Birthday：</label>
-                    <input type="date" class="col form-cotrol" id="birthday" name="birthday" value="">
+                    <label for="birthday" class="label  col-form-label ">生日 Birthday：</label><br>
+                    <input type="date" class="col form-cotrol" id="birthday" name="birthday" value=""><br>
 
                     <!-- mail -->
-                    <label for="mail" class="label col-form-label ">電郵 E-mail：</label>
-                    <input type="email" class="col form-cotrol " id="mail" name="mail" value="">
+                    <label for="mail" class="label col-form-label ">電郵 E-mail：</label><br>
+                    <input type="email" class="col form-cotrol " id="mail" name="mail" value=""><br>
 
                     
 
@@ -105,14 +106,14 @@
                         <!-- 性別-男 -->
                         <div class=" form-check-inline ">
                             <label for="male" class="label form-check-label ">
-                                <input type="radio" class="radio form-check-input mt-3" id="gender" name="gender" value="">男
+                                <input type="radio" class="radio form-check-input mt-3" id="gender" name="gender" value="1">男
                                 male
                             </label>
                         </div>
                         <!-- 性別-女 -->
                         <div class=" form-check-inline ">
                             <label for="female" class="label form-check-label ">
-                                <input type="radio" class="radio  form-check-input mt-3 ml-5" id="gender" name="gender" value="">女
+                                <input type="radio" class="radio  form-check-input mt-3 ml-5" id="gender" name="gender" value="2">女
                                 female
                             </label>
                         </div>

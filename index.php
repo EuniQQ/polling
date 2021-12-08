@@ -1,3 +1,4 @@
+<?php include_once "api/db.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@ body{
     </style>
 </head>
 <body>
- 
+
 <div class="container mx-0 ">
 <div class="row">
   <div class="col-lg-12
