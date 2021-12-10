@@ -49,6 +49,7 @@ if(isset($_SESSION['user'])){
 
 }else{
 ?>
+
 <div class="clearfix">
   <a class="btn btn-lg btn-warning ml-3 my-3 float-left" href="?do=login">會員登入</a>
   <a class="btn btn-lg btn-info ml-2 my-3 float-left" href="?do=reg">註冊會員</a>

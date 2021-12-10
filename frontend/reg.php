@@ -68,17 +68,17 @@
 <body>
 
     <!-- 頁首 -->
-    <div class="jumbotron container row text-center">     
+    <!-- <div class="jumbotron container row text-center">      -->
         <h1 class="text-center font-weight-bold mx-auto">- 註冊會員 -</h1>
         <!-- <h3 class="text-center font-weight-bold  mx-auto"> Register</h3>       -->
-    </div>
+    <!-- </div> -->
 
     <form action="./api/reg.php" method="post" id="regForm">
         <div class="container">
 
             <div class="row ">
                 <!-- 左半邊欄位 -->
-                <div class="form-group col-sm-6 text-center ml-5">
+                <div class="form-group col-sm-9 text-center ml-5">
                     <!-- 帳號 -->
                     <label for="account" class="label col-form-label">帳號 Account：</label><br>
                     <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入手機號碼 ex.0988-******"><br>
@@ -104,14 +104,14 @@
                     <label for="gender" class="label  col-form-label font-weight-normal mt-4">性別 Gender：<br>
                         
                         <!-- 性別-男 -->
-                        <div class=" form-check-inline ">
+                        <div class=" form-check-inline d-inline">
                             <label for="male" class="label form-check-label ">
                                 <input type="radio" class="radio form-check-input mt-3" id="gender" name="gender" value="1">男
                                 male
                             </label>
                         </div>
                         <!-- 性別-女 -->
-                        <div class=" form-check-inline ">
+                        <div class=" form-check-inline d-inline">
                             <label for="female" class="label form-check-label ">
                                 <input type="radio" class="radio  form-check-input mt-3 ml-5" id="gender" name="gender" value="2">女
                                 female
@@ -126,7 +126,7 @@
                 <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i></i> 送出表單</button> -->
                 <button type="reset" class="btn btn-outline-secondary mr-5 btn-lg"><i class="far fa-paper-plane"></i>
                     重新填寫</button>
-                <button type="submit" class="btn btn-secondary btn-lg">送出表單</button>
+                <button type="submit" class="btn btn-secondary btn-lg"><a href="./frontend/show_vote_list.php"></a>送出表單</button>
                 <!-- <button type="submit" class="btn btn- btn-lg"><a href="./login.php"></a>會員登入</button> -->
                 </div>
           
