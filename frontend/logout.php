@@ -4,5 +4,5 @@
 unset($_SESSION['user']);
 
 //使用者登出後，導回首頁
-// to("index.php");
+to("index.php");
 ?>

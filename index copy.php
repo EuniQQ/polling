@@ -10,6 +10,8 @@
     <style>
 *{
     box-sizing:border-box;
+    
+
 }
 
 body{
@@ -20,49 +22,32 @@ body{
     background-size: cover;
     /* overflow:hidden; */
     display:flex;
-    flex-flow:row nowrap;    
+    flex-flow:row nowrap;
+    
 }
 
 .left{
-  flex-basis:1800px;
+  flex-basis:1820;
   height:1080px;
-  /* border:1px solid red; */
+  border:1px solid red;
 }
 
 .right{
-  flex-basis:120px;
+  flex-basis:100px;
   height:1080px;
-  /* border:1px solid black; */
+  border:1px solid black;
 }
     </style>
 </head>
 
 
 <body>
-  <!-- left -->
+
 <!-- <div class="container mx-0 left"> -->
-<div class="left mx-auto" >
-<?php
-//根據網址帶的do參數內容來決定要include那一個檔案內容
-$do=(isset($_GET['do']))?$_GET['do']:'show_vote_list';
-
-//建立要引入的檔案路徑
-$file="./frontend/".$do.".php";
-if(file_exists($file)){
-    include $file;
-}else{
-    include "./frontend/show_vote_list.php";
-}
-
-?>
-</div>
-<!-- left end -->
-
-
-
-
-<div class="right">
-   
+<div class="left">
+ <!-- <div class="row">
+  <div class="col"> -->
+  
   <?php
   //判斷是否有任何的錯誤訊息存在，有則顯示
    if(isset($_SESSION['error'])){
@@ -78,30 +63,46 @@ if(file_exists($file)){
     <a class="btn active btn-primary mx-1" href="index.php?do=logout">登出</a>
     </div>
 
-
 <?php
 }else{
   ?>
   
-  <nav class=" right container d-flex flex-column  "> 
-    <a class="btn " style="writing-mode:vertical-lr ;" href="?do=login">會 員 登 入  </a>
-    <p> ─────</p>
-    <a class="btn " style="writing-mode:vertical-lr ;" href="?do=reg">註 冊 會 員</a>
-    <!-- writing-mode:vertical-lr = 水平改垂直書寫 -->
-  </nav>
+  <nav class=" d-flex flex-column  right">
+  <a class="btn btn-warning  " style="writing-mode:vertical-lr" href="?do=login">會員登入</a>
+  <a class="btn btn-info  " style="writing-mode:vertical-lr" href="?do=reg">註冊會員</a>
+ 
+</nav>
 
 
 
 <?php
 }
 ?>
+
+
+
+<?php
+
+//根據網址帶的do參數內容來決定要include那一個檔案內容
+$do=(isset($_GET['do']))?$_GET['do']:'show_vote_list';
+
+//建立要引入的檔案路徑
+$file="./frontend/".$do.".php";
+if(file_exists($file)){
+    include $file;
+}else{
+    include "./frontend/show_vote_list.php";
+}
+
+?>
+
+
+
+
+
+<!-- </div>
+</div> -->
 </div>
-
-<!-- right end -->
-
-
-
-
 
 
 
