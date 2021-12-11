@@ -12,7 +12,7 @@ if(!isset($_SESSION['user'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>問卷後台系統</title>
+    <title>問卷系統</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <style>
       .container{
@@ -24,57 +24,31 @@ if(!isset($_SESSION['user'])){
 </head>
 <body>
 
-<!-- <div class="jumbotron p-0 mb-0"  style="overflow:hidden;height:250px">
-<a href="index.php">
-<div id="carouselExampleSlidesOnly" class="carousel slide  position-relative" data-ride="carousel">
-  <div class="carousel-inner position-absolute" style="top:-250px">
-  <?php 
-    $images=all('ad',['sh'=>1]);
 
-    foreach($images as $key => $image){
-      if($key==0){
-        echo "<div class='carousel-item active'>";
-      }else{
-        echo "<div class='carousel-item'>";
-      }
+<nav class='bg-light shadow py-3 px-2 d-flex justify-content-between mb-4'>
 
-      echo "  <img class='d-block w-100' src='../image/{$image['name']}' alt='{$image['intro']}'>";
-      echo "</div>";
-      
-
-    }
-
-
-  ?>
-  </div>
-</div>
-</a>
-</div> -->
-
-<!-- 導覽列 -->
-<nav class='bg-info shadow py-3 px-2 d-flex justify-content-between mb-4'>
 <div>
   <a class='px-2' href="?do=show_vote_list">問卷管理</a>
   <a class='px-2' href="?do=member">會員管理</a>
   <a class='px-2' href="?do=ad">廣告管理</a>  
-
-
 </div>
-<?php 
 
+
+<?php 
 if(isset($_SESSION['user'])){
-  echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
+echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
 ?>
+
+
 <div>
   <a class="btn btn-sm btn-primary mx-1" href="../logout.php">登出</a>
 </div>
-
 <?php
 }
 ?>
 
 </nav>
-<!-- 導覽列 end-->
+
 
 <div class="container">
 <?php

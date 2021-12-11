@@ -26,13 +26,11 @@ body{
 .left{
   flex-basis:1800px;
   height:1080px;
-  /* border:1px solid red; */
 }
 
 .right{
   flex-basis:120px;
   height:1080px;
-  /* border:1px solid black; */
 }
     </style>
 </head>
@@ -40,18 +38,18 @@ body{
 
 <body>
   <!-- left -->
-<!-- <div class="container mx-0 left"> -->
+
 <div class="left mx-auto" >
 <?php
 //根據網址帶的do參數內容來決定要include那一個檔案內容
-$do=(isset($_GET['do']))?$_GET['do']:'show_vote_list';
+$do=(isset($_GET['do']))?$_GET['do']:'show_vote_tytle';
 
 //建立要引入的檔案路徑
 $file="./frontend/".$do.".php";
 if(file_exists($file)){
     include $file;
 }else{
-    include "./frontend/show_vote_list.php";
+    include "./frontend/show_vote_tytle.php";
 }
 
 ?>
@@ -84,9 +82,9 @@ if(file_exists($file)){
   ?>
   
   <nav class=" right container d-flex flex-column  "> 
-    <a class="btn " style="writing-mode:vertical-lr ;" href="?do=login">會 員 登 入  </a>
-    <p> ─────</p>
-    <a class="btn " style="writing-mode:vertical-lr ;" href="?do=reg">註 冊 會 員</a>
+    <a class="btn font-weight-bold" style="writing-mode:vertical-lr ;" href="?do=login">會 員 登 入  </a>
+    <p>────</p>
+    <a class="btn font-weight-bold" style="writing-mode:vertical-lr ;" href="?do=reg">註 冊 會 員</a>
     <!-- writing-mode:vertical-lr = 水平改垂直書寫 -->
   </nav>
 
