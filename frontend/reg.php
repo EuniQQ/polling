@@ -96,7 +96,7 @@
 
                     <!-- mail -->
                     <label for="mail" class="label col-form-label ">電郵 E-mail：</label><br>
-                    <input type="email" class="col form-cotrol " id="mail" name="mail" value=""><br>
+                    <input type="email" class="col form-cotrol " id="email" name="email" value=""><br>
 
                     
 

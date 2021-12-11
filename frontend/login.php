@@ -69,7 +69,7 @@
         <h1 class="text-center font-weight-bold mx-auto">- 會員登入 -</h1>
         <!-- <h3 class="text-center font-weight-bold  mx-auto"> Register</h3>       -->
     </div>
-    <form action="../api/check_login.php" method="post" id="loginForm">
+    <form action="./api/check_login.php" method="post" id="loginForm">
         <div class="container">
 
             <div class="row">
@@ -88,7 +88,7 @@
         </div>
                 <!-- 送出表單 -->
                 <div class="form-group text-center mt-5">
-                <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i></i> 送出表單</button> -->
+                <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i> 送出表單</button> -->
                 <button type="reset" class="btn btn-outline-secondary mr-5 btn-lg"><i class="far fa-paper-plane"></i>
                     忘記密碼</button>
                 <button type="submit" class="btn btn-secondary btn-lg"><a href="./login.php"></a>會員登入</button>

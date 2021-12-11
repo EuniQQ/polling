@@ -10,7 +10,6 @@
     <style>
 *{
     box-sizing:border-box;
-    /* overflow:scroll; */
     margin:0;
 
 }
@@ -28,8 +27,7 @@ body{
 
 <div class="container mx-0 ">
 <div class="row">
-  <div class="col-lg-12
-   ">
+  <div class="col-lg-12">
 <?php
 
 //判斷是否有任何的錯誤訊息存在，有則顯示
@@ -42,7 +40,7 @@ if(isset($_SESSION['user'])){
   echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
 ?>
 <div>
-  <a class="btn btn-lg btn-primary mx-1" href="logout.php">登出</a>
+  <a class="btn btn-lg btn-primary mx-1" href="index.php?do=logout">登出</a>
 </div>
 
 <?php
