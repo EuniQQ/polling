@@ -36,6 +36,15 @@
       flex-basis: calc(100% - 1800px);
       height: 1080px;
     }
+
+    .welcome{
+      writing-mode:vertical-lr;
+      font-size:30px;
+
+    }
+
+
+
   </style>
 </head>
 
@@ -73,11 +82,11 @@
 
   //判斷是否有登入的紀錄，根據登入狀況，顯示不同的功能按鈕
   if(isset($_SESSION['user'])){
-  echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
+  echo "<span class=' welcome pr-5 font-weight-bold'>歡迎！{$_SESSION['user']}</span>";
   ?>
 
     <div>
-      <a class="btn active btn-primary mx-1" href="index.php?do=logout">登出</a>
+      <a class="btn btn-lg active btn-warning mx-1" href="index.php?do=logout">登出</a>
     </div>
    
 
