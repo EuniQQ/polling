@@ -18,10 +18,9 @@
         }
 
         .col {
-            height: 80px;
+            height: 70px;
             border-radius: 50px;
             width:500px;
-            font-size: larger;
             color: lightslategray;
             border-color: rgb(26, 25, 25);
         }
@@ -29,20 +28,8 @@
         .label {
             margin: 10px;
             font-size: 30px;
+            color:white;
 
-        }
-
-        .radio {
-            height: 60px;
-            width: 60px;
-            font-size: 30px;
-            border-color: rgb(26, 25, 25);
-        }
-
-        #text {
-            border-radius: 20px;
-            border-color: rgb(26, 25, 25);
-            font-size: larger;
         }
 
         .btn {
@@ -54,54 +41,48 @@
             width: 30px;
         }
 
-        .jumbotron {
-            background-color: rgb(255, 239, 148);
-            height: 180px;
-            width:1065px;
-            
-        }
-
+    
         
     </style>
 </head>
 
 <body>
 
-    <!-- 頁首 -->
-    <!-- <div class="jumbotron container row text-center">      -->
-        <h1 class="text-center font-weight-bold mx-auto">- 註冊會員 -</h1>
+    
+    <div class="container-fruid">
+        <h1 class="text-center font-weight-bold mx-auto text-white">- 註冊會員 -</h1>
         <!-- <h3 class="text-center font-weight-bold  mx-auto"> Register</h3>       -->
-    <!-- </div> -->
-
-    <form action="./api/reg.php" method="post" id="regForm">
-        <div class="container">
+          
+        <form action="./api/reg.php" method="post" id="regForm">
+      
 
             <div class="row ">
                 <!-- 左半邊欄位 -->
-                <div class="form-group col-sm-9 text-center ml-5">
+                <div class="form-group col-12 text-center ml-5">
                     <!-- 帳號 -->
-                    <label for="account" class="label col-form-label">帳號 Account：</label><br>
-                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入手機號碼 ex.0988-******"><br>
-
-                    <!-- 生日 -->
-                    <label for="password" class="label  col-form-label ">密碼 password：</label><br>
-                    <input type="password" class="col form-cotrol" id="password" name="password" value="" placeholder="請輸入4-8碼中英文，請注意大小寫英文"><br>
-
-                    <label for="fname" class="label col-form-label ">姓名 Name：</label><br>
+                    <label for="account" class="label col-form-label">帳號： 
+                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入手機號碼"><br>
+                    </label><br>
+                    <!-- 密碼 -->
+                    <label for="password" class="label  col-form-label ">密碼：
+                    <input type="password" class="col form-cotrol " id="password" name="password" value="" placeholder="請輸入4-8碼中英文"><br>
+                    </label><br>
+                    <!-- 姓名 -->
+                    <label for="fname" class="label col-form-label ">姓名：
                     <input type="text" class="col form-cotrol " id="name" name="name" value=""><br>
-
+                    </label><br>
                     <!-- 生日 -->
-                    <label for="birthday" class="label  col-form-label ">生日 Birthday：</label><br>
+                    <label for="birthday" class="label  col-form-label ">生日：
                     <input type="date" class="col form-cotrol" id="birthday" name="birthday" value=""><br>
-
+                    </label><br>
                     <!-- mail -->
-                    <label for="mail" class="label col-form-label ">電郵 E-mail：</label><br>
+                    <label for="mail" class="label col-form-label ">電郵：
                     <input type="email" class="col form-cotrol " id="email" name="email" value=""><br>
-
+                    </label><br>
                     
 
                     <!-- 性別 -->
-                    <label for="gender" class="label  col-form-label font-weight-normal mt-4">性別 Gender：<br>
+                    <label for="gender" class="label  col-form-label font-weight-normal mt-4">性別：&nbsp;  &nbsp; &nbsp;  
                         
                         <!-- 性別-男 -->
                         <div class=" form-check-inline d-inline">
@@ -120,20 +101,18 @@
                     </label>
                 </div>
             </div>
-        </div>
+        
+   
                 <!-- 送出表單 -->
                 <div class="form-group text-center">
-                <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i></i> 送出表單</button> -->
-                <button type="reset" class="btn btn-outline-secondary mr-5 btn-lg"><i class="far fa-paper-plane"></i>
-                    重新填寫</button>
-                <button type="submit" class="btn btn-secondary btn-lg"><a href="./frontend/show_vote_list.php"></a>送出表單</button>
-                <!-- <button type="submit" class="btn btn- btn-lg"><a href="./login.php"></a>會員登入</button> -->
+                <button type="reset" class="btn btn-outline-info mr-5 btn-lg"><i class="far fa-paper-plane"></i>重新填寫</button>
+                <button type="submit" class="btn btn-warning btn-lg submit-btn"><a href="./frontend/show_vote_list.php"></a>送出表單</button>
                 </div>
           
 
-    </form>
+        </form>
 
-
+    </div>
 
 
 
