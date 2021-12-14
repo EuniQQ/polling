@@ -1,7 +1,7 @@
 body{
     width:1920px;
     height:1080px;
-    background:url(./image/img_02.png);
+    background:url(../image/img_02.png);
     display:flex;
     flex-flow:column nowrap;
 
@@ -12,14 +12,16 @@ body{
 }
 
 .section{
-    flex-basis:750px;
+    flex-basis:770px;
    
 }
 
 .footer{
-    flex-basis:calc(100% - 750px);
-    border:1px solid red;
-    
+    flex-basis:calc(100% - 770px);
+    /* border:1px solid red; */
+    /* background:#aa914b; */
+    background:#83c4b9;
+    /* background:#305936; */
 
 }
 
@@ -44,10 +46,11 @@ body{
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
+    /* color: #fff; */
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
+    
   }
   
   .button:hover {background-color: #916a02}
@@ -57,3 +60,5 @@ body{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+
+

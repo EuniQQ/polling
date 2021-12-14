@@ -23,6 +23,7 @@ $options=all('options',['topic_id'=>$id]);
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
         <link rel="stylesheet" href="./css/vote_page_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
         <style>
             *{
                 box-sizing:border-box;
@@ -84,27 +85,31 @@ $options=all('options',['topic_id'=>$id]);
 
         <!-- 下半段   -->
         <!-- 答案鍵 -->
-<div class="footer"> 
-        <ol class='list-group'>
-        <form action="./api/save_vote.php" method="post">
+<div class="container-fruid footer "> 
+    <div class="row ">
+        <div class="col-12 ">
+            <div class='list-group '>
+                <form action="./api/save_vote.php" method="post">
+                <?php
+                foreach ($options as $key => $opt) {
+                    echo "<button type='submit' class='btn  btn-warning  button  mt-5  font-weight-bold'  style='color:black' target='_self'>";
+                    // echo "<input type='submit' name='opt' value='{$opt['id']}'>";
+                    echo "<input type='submit' name='opt' value='{$opt['id']}'>";
+                    echo $opt['opt'];
+                    echo "</button>";
+                    }
+                ?>
+                </form>
+            </div>
 
-<?php
-foreach ($options as $key => $opt) {
-    echo "<button type='submit' class='btn btn-warning button  mx-auto mr-5 mt-4 font-weight-bold' style='color:black' target='_self'>";
-    // echo "<input type='submit' name='opt' value='{$opt['id']}'>";
-    echo "<input type='submit' name='opt' value='{$opt['id']}'>";
-    echo $opt['opt'];
-    echo "</button>";
-}
-?>
+            <div class="clearfix">
+                <div class="text-white mx-5 d-box-inline float-right " style="font-size:30px ">
+                <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
+                </div>    
+            </div>
 
-</ol>
-
-</form>
-       
-
-<a class="btn bg-primary" href="index.php" style="">回首頁</a>  
-    
+      </div>
+   </div>  
 </div>        
 
 
