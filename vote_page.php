@@ -22,45 +22,14 @@ $options=all('options',['topic_id'=>$id]);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <link rel="stylesheet" href="./css/vote_page_style.css">
         <style>
             *{
                 box-sizing:border-box;
                 margin:0px;
             }
             
-            body{
-                width:1920px;
-                height:1080px;
-                background:url(./image/img_02.png);
-                display:flex;
-                flex-flow:column nowrap;
-
-            }
-
-            .container{
-                margin-top:100px;
-            }
-
-            .section{
-                flex-basis:750px;
-               
-            }
-
-            .footer{
-                flex-basis:calc(100% - 750px);
-            }
-
-            .btn {
-                width: 25%; 
-                transition:width 5s;
-            }
-
-            .btn:hover{
-                box-shadow:0px 5px 5px rgb(107, 107, 107);
-                width: 50%;
-                transition:linear
-            }
-
+            
                     
         </style>
 </head>
@@ -115,13 +84,14 @@ $options=all('options',['topic_id'=>$id]);
 
         <!-- 下半段   -->
         <!-- 答案鍵 -->
-       
+<div class="footer"> 
         <ol class='list-group'>
         <form action="./api/save_vote.php" method="post">
 
 <?php
 foreach ($options as $key => $opt) {
-    echo "<button type='submit' class='btn btn-warning btn-lg d-flex mx-auto mt-4 font-weight-bold' style='color:black' target='_self'>";
+    echo "<button type='submit' class='btn btn-warning button  mx-auto mr-5 mt-4 font-weight-bold' style='color:black' target='_self'>";
+    // echo "<input type='submit' name='opt' value='{$opt['id']}'>";
     echo "<input type='submit' name='opt' value='{$opt['id']}'>";
     echo $opt['opt'];
     echo "</button>";
@@ -133,16 +103,15 @@ foreach ($options as $key => $opt) {
 </form>
        
 
-        
-        
+<a class="btn bg-primary" href="index.php" style="">回首頁</a>  
+    
+</div>        
 
 
 
 
 
 
-
-<!-- <a href="" class="btn btn-custom-style-v" onclick="voting_send(4)"></a> -->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
