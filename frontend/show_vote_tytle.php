@@ -47,20 +47,20 @@
 <body>
    
 
-<!-- <div class='container-fruid'> -->
+
 <div class="container-fruid ">
 <div class="voteTytle d-flex justify-content-center ">
     <div class="box col-md-1 circle text-center mx-4 d-box-inline " style="background-color:rgb(253, 255, 246)">
-        <a href="?do=show_vote_list" style="color:rgb(73, 60, 3)">重啟<br>核四</a>
+        <a href="vote_page.php?id=8" style="color:rgb(73, 60, 3)">重啟<br>核四</a>
         </div>
     <div class="box col-md-1 circle text-center mx-4 d-box-inline" style="background-color:rgb(209, 137, 1)">
-        <a href="?do=show_vote_list" style="color:rgb(247, 247, 246)">進口<br>萊豬</a>
+        <a href="vote_page.php?id=9" style="color:rgb(247, 247, 246)">進口<br>萊豬</a>
     </div>
     <div class="box col-md-1 circle text-center mx-4 d-box-inline" style="background-color:rgb(240, 228, 125)">
-        <a href="?do=show_vote_list" style="color:rgb(121, 59, 2)">大選<br>公投</a>
+        <a href="vote_page.php?id=10" style="color:rgb(121, 59, 2)">大選<br>公投</a>
     </div>
     <div class="box col-md-1 circle text-center mx-4 d-box-inline" style="background-color:rgb(255, 255, 255)">
-        <a href="?do=show_vote_list" style="color:rgb(44, 65, 1)">保護<br>藻礁</a>
+        <a href="vote_page.php?id=11" style="color:rgb(44, 65, 1)">保護<br>藻礁</a>
     </div>
 </div>
 

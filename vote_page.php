@@ -1,17 +1,14 @@
-<?php
 
 
+<?php include_once "api/db.php";
 
-$data=[
-["id"=> "1"  , "background"=> "./image/Q_01.png" , "question" => "您是否同意核四啟封商轉發電？"  ],
-["id"=> "2"  , "background"=> "./image/Q_02.png" , "question" => "您是否同意政府應全面禁止進口含有萊克多巴胺之乙型受體素豬隻之肉品、內臟及其相關產製品？"],
-["id"=> "3"  , "background"=> "./image/Q_03.png" , "question" => "您是否同意公民投票案公告成立後半年內，若該期間內遇有全國性選舉時，在符合公民投票法規定之情形下，公民投票應與該選舉同日舉行？ " ],
-["id"=> "4"  , "background"=> "./image/Q_04.png" , "question" => "您是否同意中油第三天然氣接收站遷離桃園大潭藻礁海岸及海域？(即北起觀音溪出海口，南至新屋溪出海口之海岸，即由上述海岸最低潮線往外平行延伸五公里之海域)"],
-
-];  
-
-
+$id=$_GET['id'];
+$topicNum=$id-7;
+$subject=find('topics',$id);
+$options=all('options',['topic_id'=>$id]);
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -34,7 +31,7 @@ $data=[
             body{
                 width:1920px;
                 height:1080px;
-                background:<?= $data[$i]['background']?>;
+                background:url(./image/img_02.png);
                 display:flex;
                 flex-flow:column nowrap;
 
@@ -42,105 +39,110 @@ $data=[
 
             .container{
                 margin-top:100px;
-                border:1px solid black;
-            }
-
-            .logo{
-                width:20%;
-                margin:auto;
-                
             }
 
             .section{
-                width:1920px;
-                height:750px;
-                border:1px solid red;
+                flex-basis:750px;
+               
             }
 
             .footer{
-                width:1920px;
-                height:calc(100% - 750px);
+                flex-basis:calc(100% - 750px);
             }
-            
+
+            .btn {
+                width: 25%; 
+                transition:width 5s;
+            }
+
+            .btn:hover{
+                box-shadow:0px 5px 5px rgb(107, 107, 107);
+                width: 50%;
+                transition:linear
+            }
+
+                    
         </style>
 </head>
 
-<body>
-
 <?php
  
- if(isset($_GET['page'])){
-    $page=$_GET['page'];
-    $i=$page-1;
-}else{
-    $page=1;
-    $i= 1;
-}
+ 
+     if($id==8){
+         $prePage=8; 
+         $nextPage=9;
+     }else if ($id==11) {  
+         $prePage=10;   
+         $nextPage=11; 
+     }else{
+        $nextPage=$id+1;
+        $prePage=$id-1; 
+     }
+   
+ ?>
 
-$lastPage=$page-1;
-$nextPage=$page+1;
+<body>
 
-
-    if($page==1){
-        $lastPage='vote_result.php'; 
-    }else if ($page==5) {    
-        $nextPage='index.php?do=vote_result'; 
-    }
-  
-
-
-
-
-?>
         <!-- 上半段 -->
 <div class="section container-fruid   ">
     <div class="row  d-flex  justify-content-between  align-items-center text-center " >
         <!-- 上一頁連結 -->
+        
+ 
         <div class="col-sm-1 float-left">
-            <a href="vote_page.php?page=<?=$lastPage;?>" class="fas fa-angle-left fa-5x" style='color:gray'  role="button"></a>
+            <a href="vote_page.php?id=<?=$prePage;?>" class="fas fa-angle-left fa-5x" style='color:gray'  role="button"></a>
         </div>       
         
        
         <!-- 標題 -->
         <div class="col-sm-5">   
-            
-           <h1 class="text-center  font-weight-bold " style="font-size:60px"><?= $data[$i]['id'] ?></h1>
+           <!-- 題數  -->
+           <p class="text-center font-weight-bold" style="font-size:60px ;margin-top:140px"><?= $topicNum ?></p><br>
            <!-- 內文 -->
-           <h2 class="font-weight-bold" style="width: 500px; size:40px "><?= $data[$i]['question']?></h2>
+           <h2 class="font-weight-bold mx-auto" style="width:400px; size:40px; line-height:200%; margin-top:-40px;">
+           <?=$subject['topic'];?></h2>
         </div>
        
         <!-- 下一頁連結 -->
           <div class="col-sm-1 float-right">
-              <a href="vote_page.php?page=<?=$nextPage;?>" class="fas fa-angle-right fa-5x" style='color:gray' role="button"></a> 
+              <a href="vote_page.php?id=<?=$nextPage;?>" class="fas fa-angle-right fa-5x" style='color:gray' role="button"></a> 
           </div>       
       <!-- 上半段結束 -->
-      </div>
-          
+    </div>
+</div>  
+      
+      
+
         <!-- 下半段   -->
         <!-- 答案鍵 -->
-    <div class="footer container">
-        <div class="col-sm-5 d-flex justify-content-around">
-            <div class="box">
-                <button type="button" class="btn btn-secondary btn-lg d-inline px-3 mt-4 text-white" style="" ><a href="index.php?page=<?=$page;?>" style="color:white">同意</a></button>
-            </div>
+       
+        <ol class='list-group'>
+        <form action="./api/save_vote.php" method="post">
 
-            <div class="box">
-                <button type="button" class="btn btn-secondary btn-lg d-inline px-3 mt-4  text-white" style=""><a href="index.php?page=<?=$page;?>" style="color:white">不同意</a></button>
-            </div>
+<?php
+foreach ($options as $key => $opt) {
+    echo "<button type='submit' class='btn btn-warning btn-lg d-flex mx-auto mt-4 font-weight-bold' style='color:black' target='_self'>";
+    echo "<input type='submit' name='opt' value='{$opt['id']}'>";
+    echo $opt['opt'];
+    echo "</button>";
+}
+?>
 
-            <div class="box">
-                <button type="button" class="btn btn-secondary btn-lg d-inline px-3 mt-4  text-white" style=""><a href="index.php?page=<?=$page;?>" style="color:white">沒意見</a></button>
-            </div>
-        </div>
-    </div>
+</ol>
 
-    
- 
-</div>
+</form>
+       
+
+        
+        
 
 
 
-     
+
+
+
+
+<!-- <a href="" class="btn btn-custom-style-v" onclick="voting_send(4)"></a> -->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

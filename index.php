@@ -29,7 +29,7 @@
     .left {
       flex-basis: 1800px;
       height: 1080px;
-      border: 1px solid red;
+      /* border: 1px solid red; */
     }
 
     .right {

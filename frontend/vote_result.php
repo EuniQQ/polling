@@ -6,6 +6,7 @@ $sql="select *
       where `topics`.`id`=`options`.`topic_id` AND 
             `topics`.`id`='{$_GET['id']}'";
 
+//任意查詢函式
 $rows=q($sql);
 ?>
 
@@ -21,3 +22,6 @@ $rows=q($sql);
     }
 ?>
 </ol>
+
+
+

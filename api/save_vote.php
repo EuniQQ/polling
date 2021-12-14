@@ -20,3 +20,14 @@ update('options',['count'=>$opt['count']],['id'=>$opt_id]);
 
 //完成投票紀錄，導向回投票結果頁並帶上主題的id
 to("../index.php?do=vote_result&id={$opt['topic_id']}");
+
+// $topic_id=$opt['topic_id'];
+// $next_topic=$topic_id+1;
+// if($topic_id>=8){
+//     to("?id=$next_topic"); 
+// }else if ($topic_id==11) {    
+//     // $nextPage='index.php?do=vote_result'; 
+//     to("index.php");
+// }
+
+?>
