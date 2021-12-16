@@ -88,25 +88,24 @@ $options=all('options',['topic_id'=>$id]);
 <div class="container-fruid footer "> 
     <div class="row ">
         <div class="col-12 ">
-            <div class='list-group '>
+        
                 <form action="./api/save_vote.php" method="post">
                 <?php
                 foreach ($options as $key => $opt) {
-                    echo "<button type='submit' class='btn  btn-warning  button  mt-5  font-weight-bold'  style='color:black' target='_self'>";
-                    // echo "<input type='submit' name='opt' value='{$opt['id']}'>";
-                    echo "<input type='submit' name='opt' value='{$opt['id']}'>";
-                    echo $opt['opt'];
-                    echo "</button>";
+                    echo "<label >";
+                    echo "<input type='button' id='{$opt['id']}' name='opt' value='{$opt['opt']}' class='btn btn-warning button mt-5 mx-3 font-weight-bold'>";
+                    echo "</label>";                 
                     }
                 ?>
+                <input type='submit' name='opt' value='送出投票' class='btn  btn-light  button  mt-5 mx-3 font-weight-bold'>
+             
                 </form>
-            </div>
-
-            <div class="clearfix">
-                <div class="text-white mx-5 d-box-inline float-right " style="font-size:30px ">
-                <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
-                </div>    
-            </div>
+         
+                <div class="clearfix">
+                    <div class="text-white mx-5 d-box-inline float-right " style="font-size:30px ">
+                    <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
+                    </div>    
+                </div>
 
       </div>
    </div>  

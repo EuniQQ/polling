@@ -22,12 +22,6 @@ update('options',['count'=>$opt['count']],['id'=>$opt_id]);
 to("../index.php?do=vote_result&id={$opt['topic_id']}");
 
 
-// $topic_id=$opt['topic_id'];
-// $next_topic=$topic_id+1;
-// if($topic_id>=8){
-//     to("?id=$next_topic"); 
-// }else if ($topic_id==11) {    
-//     to("index.php");
-// }
+
 
 ?>

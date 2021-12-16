@@ -35,6 +35,7 @@
 
                 <h2 class="text-warning bg-dark p-3 " style="border-radius:15px"> 投票<br>結果<br></h2>
                 <h2 class="text-white float-left"><?=$rows[0]['topic'];?></h2>
+                 
             </div>
             <div class="modal-body">
                 
