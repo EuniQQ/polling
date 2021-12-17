@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-12-07 15:21:32
+-- 產生時間： 2021-12-16 14:36:12
 -- 伺服器版本： 10.4.21-MariaDB
 -- PHP 版本： 7.4.23
 
@@ -39,9 +39,14 @@ CREATE TABLE `options` (
 --
 
 INSERT INTO `options` (`id`, `opt`, `topic_id`, `count`) VALUES
-(1, '', 0, 0),
-(2, '', 0, 0),
-(3, '', 0, 0);
+(17, '同意', 8, 2),
+(18, '不同意', 8, 6),
+(19, '同意', 9, 3),
+(20, '不同意', 9, 1),
+(21, '同意', 10, 0),
+(22, '不同意', 10, 2),
+(23, '同意', 11, 2),
+(24, '不同意', 11, 2);
 
 -- --------------------------------------------------------
 
@@ -59,8 +64,10 @@ CREATE TABLE `topics` (
 --
 
 INSERT INTO `topics` (`id`, `topic`) VALUES
-(1, '明天上學嗎'),
-(2, '晚餐吃甚麼?');
+(8, '您是否同意核四啟封商轉發電？'),
+(9, '您是否同意政府應全面禁止進口含有萊克多巴胺之乙型受體素豬隻之肉品、內臟及其相關產製品？'),
+(10, '您是否同意公民投票案公告成立後半年內，若該期間內遇有全國性選舉時，在符合公民投票法規定之情形下，公民投票應與該選舉同日舉行？'),
+(11, '您是否同意中油第三天然氣接收站遷離桃園大潭藻礁海岸及海域？(北起觀音溪出海口，南至新屋溪出海口之海岸，由上述海岸最低潮線往外平行延伸五公里之海域)');
 
 -- --------------------------------------------------------
 
@@ -77,6 +84,15 @@ CREATE TABLE `users` (
   `gender` int(11) NOT NULL,
   `birthday` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci COMMENT='會員註冊資料';
+
+--
+-- 傾印資料表的資料 `users`
+--
+
+INSERT INTO `users` (`id`, `account`, `password`, `email`, `name`, `gender`, `birthday`) VALUES
+(1, '0980123123', '1234', 123, 123, 2, '2021-12-11'),
+(3, '0980123123', '1234', 123, 123, 2, '2021-12-11'),
+(4, '0980123123', '1234', 123, 123, 2, '2021-12-11');
 
 --
 -- 已傾印資料表的索引
@@ -108,19 +124,19 @@ ALTER TABLE `users`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `options`
 --
 ALTER TABLE `options`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -91,14 +91,21 @@ $options=all('options',['topic_id'=>$id]);
         
                 <form action="./api/save_vote.php" method="post">
                 <?php
+                // foreach ($options as $key => $opt) {
+                    // echo "<label >";
+                    // echo "<input type='button' id='{$opt['id']}' name='opt' value='{$opt['opt']}' class='btn btn-warning button mt-5 mx-3 font-weight-bold'>";
+                    // echo "</label>";                 
+                    // }
+                
+                // <input type='submit' name='opt' value='送出投票' class='btn  btn-light  button  mt-5 mx-3 font-weight-bold'>
+             
                 foreach ($options as $key => $opt) {
                     echo "<label >";
-                    echo "<input type='button' id='{$opt['id']}' name='opt' value='{$opt['opt']}' class='btn btn-warning button mt-5 mx-3 font-weight-bold'>";
+                    echo "<input type='radio' id='{$opt['id']}' name='opt' value='{$opt['id']}' >{$opt['opt']}";
                     echo "</label>";                 
                     }
                 ?>
-                <input type='submit' name='opt' value='送出投票' class='btn  btn-light  button  mt-5 mx-3 font-weight-bold'>
-             
+                <input type='submit' value='送出投票' class='btn  btn-light  button  mt-5 mx-3 font-weight-bold'>
                 </form>
          
                 <div class="clearfix">

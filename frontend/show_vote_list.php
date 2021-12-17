@@ -1,6 +1,6 @@
 <!-- 投票列表 -->
 <h1>列出所有的問題</h1>
-<img src="./" alt="">
+<img src="" alt="">
 <?php
 $subjects=all('topics');
 echo "<ol class='list-group'>";

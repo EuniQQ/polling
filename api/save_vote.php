@@ -18,8 +18,11 @@ $opt['count']=$opt['count']+1;
 update('options',['count'=>$opt['count']],['id'=>$opt_id]);
 
 
+
+
+
 //完成投票紀錄，導向回投票結果頁並帶上主題的id
-to("../index.php?do=vote_result&id={$opt['topic_id']}");
+ to("../index.php?do=vote_result&id={$opt['topic_id']}");
 
 
 

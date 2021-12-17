@@ -33,6 +33,7 @@ if(!isset($_SESSION['user'])){
 <div>
   <a class='px-2' href="?do=show_vote_list">問卷管理</a>
   <a class='px-2' href="?do=member">會員管理</a>
+  <a class='px-2' href="?do=manage_vote_2">test</a>
   <!-- <a class='px-2' href="?do=ad">廣告管理</a>   -->
 </div>
 
