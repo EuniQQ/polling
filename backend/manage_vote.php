@@ -48,7 +48,7 @@ echo "</h1>";
            //card-body 
            //管理按鈕
             echo "<div class='card-body mx-auto'>";
-               echo "<a href='../index.php?backend/index.php?do=edit_subject&id={$value['id']}' class='card-link'>";
+               echo "<a href='?do=edit_subject&id={$value['id']}' class='card-link'>";
                echo "<button class='btn btn-primary'>管理</button>";
                echo "</a>";
                //刪除題目   
