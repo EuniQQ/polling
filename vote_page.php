@@ -85,44 +85,43 @@ $options=all('options',['topic_id'=>$id]);
 
         <!-- 下半段   -->
         <!-- 答案鍵 -->
-<div class="container-fruid footer "> 
+<div class="container-fruid footer  "> 
     <div class="row ">
-        <div class="col-12 ">
+        <!-- <div class="col-12 "> -->
         
-                <form action="./api/save_vote.php" method="post">
-                <?php
-                // foreach ($options as $key => $opt) {
-                //     echo "<label >";
-                //     echo "<input type='button' id='{$opt['id']}' name='opt' value='{$opt['id']}' class='btn btn-warning button mt-5 mx-3 font-weight-bold'>{$opt['opt']}";
-                //     echo "</label>";                 
-                //     }
+        <form action="./api/save_vote.php" method="post">
+            <div class='form-check-inline d-flex justify-content-center'>
                 
-           
-                foreach ($options as $key => $opt) {
+                <!-- foreach ($options as $key => $opt) {
                     echo "<label >";
-                    echo "<input type='radio' id='{$opt['id']}' name='opt' value='{$opt['id']}'
-                    class='optBtn font-weight-bold'>{$opt['opt']}";
+                    echo "<input type='button' id='{$opt['id']}' name='opt' value='{$opt['id']}' class='btn btn-warning button mt-5 mx-3 font-weight-bold'>{$opt['opt']}";
                     echo "</label>";                 
-                    }
+                    } -->
+                <div class="choice">
+                <?php     
+                    foreach ($options as $key => $opt) {
+                    echo "<label class='form-check-label mr-5 mt-3 '>";                 
+                    echo "<input type='radio' id='{$opt['id']}' name='opt' value='{$opt['id']}'
+                                 class='form-check-input mx-auto mt-3'>&nbsp{$opt['opt']}";
+                    echo "</label>";
+                    }   
                 ?>
-                <input type='submit' value='送出投票' class='btn  btn-warning  button  mt-5 mx-3 font-weight-bold'>
-                </form>
-         
-                <div class="clearfix">
-                    <div class="text-white mx-5 d-box-inline" style="font-size:30px ">
-                    <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
-                    </div>    
                 </div>
+                <input type='submit' value='送出投票' class='btn  btn-warning  button  mt-5 mx-3 font-weight-bold'>
+                
+                <div class="clearfix">
+                    <div class="text-white mx-5 mt-5 float-right mr-0" style="font-size:30px ">
+                        <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
+                    </div>  
+                </div>  
+          
 
-                <!-- <div class="clearfix">
-                    <div class="text-white mx-5 d-box-inline float-right " style="font-size:30px ">
-                    <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
-                    </div>    
-                </div> -->
-
-
-      </div>
-   </div>  
+            </div>
+        </form>
+        
+               
+        <!-- </div> -->
+    </div>  
 </div>        
 
 

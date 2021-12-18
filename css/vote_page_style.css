@@ -18,25 +18,15 @@ body{
 
 .footer{
     flex-basis:calc(100% - 770px);
-    /* border:1px solid red; */
+    border:1px solid red;
     /* background:#aa914b; */
     background:#83c4b9;
     /* background:#305936; */
 
+
 }
 
-/* .btn-warning {
-    width: 25%; 
-    transition:width 3s;
-}
-
-.btn-warning:hover{
-    box-shadow:0px 5px 5px rgb(107, 107, 107);
-    width: 30%;
-    transition:linear
-} */
-
-.button {
+.btn {
 
     width:200px;
     display: inline-block;
@@ -53,16 +43,23 @@ body{
     
   }
   
-  .button:hover {background-color: #c93fbd};
+  .btn:hover {background-color: #e38a05};
   
-  .button:active {
+  .btn:active {
     background-color: #916a02;
     box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    /* transform: translateY(4px); */
   }
 
-  .optBtn {
-    height: 30px;
-    width: 30px;
-    font-size:larger;
+  .form-check-input {
+    height: 50px;
+    width: 50px;   
   }
+
+  .choice{
+      font-size: 40px;
+      font-weight: 600;
+      margin-left: 500px;
+  }
+
+  
