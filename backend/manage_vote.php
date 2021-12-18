@@ -42,7 +42,7 @@ echo "</h1>";
                        
                //總投票數顯示
                $count=q("SELECT sum(`count`) as '總計' FROM `options` WHERE `topic_id`='{$value['id']}'");        
-               echo "<li class='list-group-item text-center'>總計&nbsp {$count[0]['目前總計']} &nbsp票 </li>";  
+               echo "<li class='list-group-item text-center'>總計&nbsp {$count[0]['總計']} &nbsp票 </li>";  
                echo "</ul>";
            
                //card-body 
