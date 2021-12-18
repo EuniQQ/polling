@@ -9,6 +9,7 @@
   <title>問卷首頁</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       box-sizing: border-box;
@@ -40,11 +41,13 @@
 
     .welcome{
       writing-mode:vertical-lr;
-      font-size:30px;
-
+      font-size:25px;
     }
 
-
+    .rightBtns{
+      position:absolute;
+      top:750px;
+    }
 
   </style>
 </head>
@@ -83,18 +86,27 @@
 
   //判斷是否有登入的紀錄，根據登入狀況，顯示不同的功能按鈕
   if(isset($_SESSION['user'])){
-  echo "<span class=' welcome pr-5 font-weight-bold'>歡迎！{$_SESSION['user']}</span>";
+  echo "<span class=' welcome px-3 mt-5'>歡迎！{$_SESSION['user']}</span>";
   ?>
 
-    <div>
-      <a class="btn btn-lg active btn-warning mx-1" href="index.php?do=logout">登出</a>
-    </div>
-   
+  <div class="rightBtns">
+                  
+        <?php
+         if($_SESSION['user']=='manager'){
+        ?>
+        <a class='btn btn-lg active btn-success mx-3 mt-3' href='backend/index.php'><i class='fas fa-wrench'></i><br>後台</a>
+        
+        <?php
+        }
+       ?>
+        
+        <a class="btn btn-lg active btn-warning mx-3 mt-3" href="index.php?do=logout">登出</a> 
+  </div>
 
 
     <?php
-}else{
-  ?>
+   }else{
+    ?>
 
     <nav class=" right container d-flex flex-column  ">
       <a class="btn font-weight-bold" style="writing-mode:vertical-lr ;" href="?do=login">會 員 登 入 </a><br>
@@ -105,8 +117,8 @@
 
 
     <?php
-}
-?>
+    }
+   ?>
 
 
   </div>

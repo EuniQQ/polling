@@ -30,19 +30,6 @@
 
         }
 
-        /* .radio {
-            height: 60px;
-            width: 60px;
-            font-size: 30px;
-            border-color: rgb(26, 25, 25);
-        } 
-
-         #text {
-            border-radius: 20px;
-            border-color: rgb(26, 25, 25);
-            font-size: larger;
-        } */
-
         .btn {
             font-size: 28px;
         }
@@ -54,7 +41,7 @@
 <body>
 
     <!-- 頁首 -->
-    <div class="container text-center mx-auto mt-5" style="padding-top:160px;">  
+    <div class="container text-center mx-auto " style="padding-top:140px;">  
     
       
 
@@ -65,7 +52,7 @@
         </div>
         <div class="row">
             <div class="col-xl-12">
-            <h3 class="text-center font-weight-bold  mx-auto text-white" > Register</h3>
+            <h3 class="text-center font-weight-bold mx-auto text-white" > Register</h3>
             </div>              
         </div>
            
@@ -76,11 +63,11 @@
 
                     <!-- 帳號 -->
                     <label for="account" class="label  col-form-label text-white">帳號：
-                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="Enter account"></label>
+                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="&nbsp;&nbsp;Enter account"></label>
 
                     <!-- 密碼 -->
                     <label for="password" class="label col-form-label mt-5 text-white">密碼：
-                    <input type="password" class="col form-cotrol " id="password" name="password" value="" placeholder="Enter password"></label>
+                    <input type="password" class="col form-cotrol " id="password" name="password" value="" placeholder="&nbsp;&nbsp;Enter password"></label>
  
                      </div>
                  
@@ -88,9 +75,7 @@
    
                 <!-- 送出表單 -->
                 <div class="form-group text-center mt-5">
-                    <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i> 送出表單</button> -->
-                    <button type="reset" class="btn btn-outline-light mr-5 btn-lg"><i class="far fa-paper-plane"></i>
-                    忘記密碼</button>
+                    <button type="reset" class="btn btn-outline-light mr-5 btn-lg">忘記密碼</button>
                     <button type="submit" class="btn btn-warning btn-lg"><a href="./login.php"></a>&nbsp;&nbsp;登入&nbsp;&nbsp;</button>
                 </div>
   

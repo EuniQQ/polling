@@ -17,7 +17,6 @@ echo "</h1>";
             border:1px solid red;
             width:1500px;
             height:600px;
-
         }
     </style>
 </head>
@@ -47,9 +46,9 @@ echo "</h1>";
                echo "</ul>";
            
            //card-body 
-           //看結果按鈕
+           //管理按鈕
             echo "<div class='card-body mx-auto'>";
-               echo "<a href='../index.php?do=edit_subject&id=11' class='card-link'>";
+               echo "<a href='../index.php?backend/index.php?do=edit_subject&id={$value['id']}' class='card-link'>";
                echo "<button class='btn btn-primary'>管理</button>";
                echo "</a>";
                //刪除題目   
