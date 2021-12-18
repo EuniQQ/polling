@@ -92,27 +92,34 @@ $options=all('options',['topic_id'=>$id]);
                 <form action="./api/save_vote.php" method="post">
                 <?php
                 // foreach ($options as $key => $opt) {
-                    // echo "<label >";
-                    // echo "<input type='button' id='{$opt['id']}' name='opt' value='{$opt['opt']}' class='btn btn-warning button mt-5 mx-3 font-weight-bold'>";
-                    // echo "</label>";                 
-                    // }
+                //     echo "<label >";
+                //     echo "<input type='button' id='{$opt['id']}' name='opt' value='{$opt['id']}' class='btn btn-warning button mt-5 mx-3 font-weight-bold'>{$opt['opt']}";
+                //     echo "</label>";                 
+                //     }
                 
-                // <input type='submit' name='opt' value='送出投票' class='btn  btn-light  button  mt-5 mx-3 font-weight-bold'>
-             
+           
                 foreach ($options as $key => $opt) {
                     echo "<label >";
-                    echo "<input type='radio' id='{$opt['id']}' name='opt' value='{$opt['id']}' >{$opt['opt']}";
+                    echo "<input type='radio' id='{$opt['id']}' name='opt' value='{$opt['id']}'
+                    class='optBtn font-weight-bold'>{$opt['opt']}";
                     echo "</label>";                 
                     }
                 ?>
-                <input type='submit' value='送出投票' class='btn  btn-light  button  mt-5 mx-3 font-weight-bold'>
+                <input type='submit' value='送出投票' class='btn  btn-warning  button  mt-5 mx-3 font-weight-bold'>
                 </form>
          
                 <div class="clearfix">
-                    <div class="text-white mx-5 d-box-inline float-right " style="font-size:30px ">
+                    <div class="text-white mx-5 d-box-inline" style="font-size:30px ">
                     <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
                     </div>    
                 </div>
+
+                <!-- <div class="clearfix">
+                    <div class="text-white mx-5 d-box-inline float-right " style="font-size:30px ">
+                    <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
+                    </div>    
+                </div> -->
+
 
       </div>
    </div>  

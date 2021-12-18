@@ -23,13 +23,14 @@
       background-size: cover;
       overflow: hidden;
       display: flex;
+
       flex-flow: row nowrap;
     }
 
     .left {
       flex-basis: 1800px;
       height: 1080px;
-      /* border: 1px solid red; */
+     
     }
 
     .right {

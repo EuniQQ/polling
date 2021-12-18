@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <style>
-        
-    </style>
     </head>
 <body>
 
@@ -55,7 +52,7 @@
                 <div class="modal-footer ">
                   <a href="#" class="btn">Close</a>
                   <a href="index.php" class="btn btn-primary">HOME</a>
-                  <a href="index.php" class="btn btn-primary">其他選舉結果</a>
+                  <a href="?do=show_vote_list" class="btn btn-primary">其他選舉結果</a>
                 </div>
     </div>
 </div>

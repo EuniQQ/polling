@@ -53,7 +53,7 @@ body{
     
   }
   
-  .button:hover {background-color: #916a02}
+  .button:hover {background-color: #c93fbd};
   
   .button:active {
     background-color: #916a02;
@@ -61,4 +61,8 @@ body{
     transform: translateY(4px);
   }
 
-
+  .optBtn {
+    height: 30px;
+    width: 30px;
+    font-size:larger;
+  }
