@@ -19,7 +19,7 @@
       width: 1920px;
       height: 1080px;
       margin: 0;
-      background: url(./image/index_img-4.png);
+      background: url(./image/index_img-3.png);
       background-size: cover;
       overflow: hidden;
       display: flex;
@@ -104,10 +104,11 @@
     </nav>
 
 
-
     <?php
 }
 ?>
+
+
   </div>
 
   <!-- right end -->
