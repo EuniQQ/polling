@@ -25,3 +25,4 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     ?>
 <input type="submit" value="送出">
 </form>
+

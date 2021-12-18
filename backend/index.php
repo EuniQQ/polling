@@ -45,6 +45,7 @@ echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
 
 <div>
   <a class="btn btn-sm btn-primary mx-1" href="../logout.php">登出</a>
+  <a class="btn btn-sm btn-warning mx-1" href="../index.php">回首頁</a>
 </div>
 <?php
 }

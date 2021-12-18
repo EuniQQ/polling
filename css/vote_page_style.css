@@ -52,14 +52,15 @@ body{
   }
 
   .form-check-input {
-    height: 50px;
-    width: 50px;   
-  }
+    height: 45px;
+    width: 45px;   
+      }
 
   .choice{
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 600;
       margin-left: 500px;
+     
   }
 
   
