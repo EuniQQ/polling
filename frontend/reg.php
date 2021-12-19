@@ -18,9 +18,9 @@
         }
 
         .col {
-            height: 70px;
+            height: 60px;
             border-radius: 50px;
-            width:500px;
+            width:400px;
             color: lightslategray;
             border-color: rgb(26, 25, 25);
         }
@@ -50,7 +50,7 @@
 
     
     <div class="container-fruid">
-        <h1 class="text-center font-weight-bold mx-auto text-white">- 註冊會員 -</h1>
+        <!-- <h3 class="text-center font-weight-bold mx-auto text-white">- 註 冊 會 員 -</h3> -->
         <!-- <h3 class="text-center font-weight-bold  mx-auto"> Register</h3>       -->
           
         <form action="./api/reg.php" method="post" id="regForm">
@@ -58,10 +58,10 @@
 
             <div class="row ">
                 <!-- 左半邊欄位 -->
-                <div class="form-group col-12 text-center ml-5">
+                <div class="form-group col-12 text-center mt-5">
                     <!-- 帳號 -->
                     <label for="account" class="label col-form-label">帳號： 
-                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入手機號碼"><br>
+                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入帳號"><br>
                     </label><br>
                     <!-- 密碼 -->
                     <label for="password" class="label  col-form-label ">密碼：
@@ -82,19 +82,19 @@
                     
 
                     <!-- 性別 -->
-                    <label for="gender" class="label  col-form-label font-weight-normal mt-4">性別：&nbsp;  &nbsp; &nbsp;  
+                    <label for="gender" class="label  col-form-label">性別：&nbsp;  &nbsp; &nbsp;  
                         
                         <!-- 性別-男 -->
                         <div class=" form-check-inline d-inline">
-                            <label for="male" class="label form-check-label ">
-                                <input type="radio" class="radio form-check-input mt-3" id="gender" name="gender" value="1">男
+                            <label for="male" class="label form-check-label">
+                                <input type="radio" class="radio form-check-input" id="gender" name="gender" value="1">男
                                 male
                             </label>
                         </div>
                         <!-- 性別-女 -->
                         <div class=" form-check-inline d-inline">
                             <label for="female" class="label form-check-label ">
-                                <input type="radio" class="radio  form-check-input mt-3 ml-5" id="gender" name="gender" value="2">女
+                                <input type="radio" class="radio  form-check-input ml-3" id="gender" name="gender" value="2">女
                                 female
                             </label>
                         </div>
@@ -105,8 +105,8 @@
    
                 <!-- 送出表單 -->
                 <div class="form-group text-center">
-                <button type="reset" class="btn btn-outline-info mr-5 btn-lg"><i class="far fa-paper-plane"></i>重新填寫</button>
-                <button type="submit" class="btn btn-warning btn-lg submit-btn"><a href="./frontend/show_vote_list.php"></a>送出表單</button>
+                <button type="reset" class="btn btn-outline-info mr-5 btn-lg">重新填寫</button>
+                <button type="submit" class="btn btn-warning btn-lg submit-btn"><a href="./frontend/show_vote_list.php"></a>註冊會員</button>
                 </div>
           
 

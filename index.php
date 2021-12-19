@@ -24,7 +24,6 @@
       background-size: cover;
       overflow: hidden;
       display: flex;
-
       flex-flow: row nowrap;
     }
 
@@ -40,7 +39,7 @@
     }
 
     .welcome{
-      writing-mode:vertical-lr;
+      writing-mode:vertical-lr; 
       font-size:25px;
     }
 
@@ -54,90 +53,82 @@
 
 
 <body>
+
   <!-- left -->
 
-  <div class="left mx-auto">
-    <?php
-    //根據網址帶的do參數內容來決定要include那一個檔案內容
-    $do=(isset($_GET['do']))?$_GET['do']:'show_vote_tytle';
-
-    //建立要引入的檔案路徑
-    $file="./frontend/".$do.".php";
-    
-    if(file_exists($file)){
-    include $file;
-    }else{
-    include "./frontend/show_vote_tytle.php";
-}
-    ?>
+  <div class="left">
+    <div class="container">
+      
+      <?php
+      //根據網址帶的do參數內容來決定要include那一個檔案內容
+      $do=(isset($_GET['do']))?$_GET['do']:'show_vote_tytle';
+  
+      //建立要引入的檔案路徑
+      $file="./frontend/".$do.".php";
+      
+      if(file_exists($file)){
+      include $file;
+      }else{
+      include "./frontend/show_vote_tytle.php";
+      }
+      ?>
+      
+    </div>
   </div>
   <!-- left end -->
 
 
 
 
-  <div class="right">
+  <nav class="right  ">
+    <div class="container">
 
+      <?php
+      //判斷是否有任何的錯誤訊息存在，有則顯示
+       if(isset($_SESSION['error'])){
+       echo "<span class='text-danger'>".$_SESSION['error']."</span>";
+       }
+    
+      //判斷是否有登入的紀錄，根據登入狀況，顯示不同的功能按鈕
+      if(isset($_SESSION['user'])){
+      echo "<span class=' welcome px-3 mt-5'>歡迎！{$_SESSION['user']}</span>";
+      ?>
+  
+  
+  <!-- 右下角按鈕 -->
+  <div class="rightBtns">              
     <?php
-  //判斷是否有任何的錯誤訊息存在，有則顯示
-   if(isset($_SESSION['error'])){
-   echo "<span class='text-danger'>".$_SESSION['error']."</span>";
-   }
-
-  //判斷是否有登入的紀錄，根據登入狀況，顯示不同的功能按鈕
-  if(isset($_SESSION['user'])){
-  echo "<span class=' welcome px-3 mt-5'>歡迎！{$_SESSION['user']}</span>";
-  ?>
-
-  <div class="rightBtns">
-                  
+           if($_SESSION['user']=='manager'){
+             ?>
+          <a class='btn btn-lg active btn-success mx-3 mt-3' href='backend/index.php'><i class='fas fa-wrench'></i><br>後台</a>
+          
+          <?php
+          }
+          ?>
+          
+          <a class="btn btn-lg active btn-warning mx-3 mt-3" href="index.php?do=logout">登出</a> 
+          
+        </div>
         <?php
-         if($_SESSION['user']=='manager'){
-        ?>
-        <a class='btn btn-lg active btn-success mx-3 mt-3' href='backend/index.php'><i class='fas fa-wrench'></i><br>後台</a>
+            }else{
+              ?>
+  
+        <!-- 右上登入連結 -->
+          <div class=" right container d-flex flex-column  ">
+            <a class="btn font-weight-bold" style="writing-mode:vertical-lr ; font-size:20px ;" href="?do=login">會 員 登 入 </a><br>
+            <p>&nbsp&nbsp─────</p>
+            <a class="btn font-weight-bold" style="writing-mode:vertical-lr ; font-size:20px ;" href="?do=reg">註 冊 會 員</a>
+            <!-- writing-mode:vertical-lr = 水平改垂直書寫 -->
+          </div>
         
         <?php
-        }
-       ?>
-        
-        <a class="btn btn-lg active btn-warning mx-3 mt-3" href="index.php?do=logout">登出</a> 
-  </div>
+      }
+      ?>
 
-
-    <?php
-   }else{
-    ?>
-
-    <nav class=" right container d-flex flex-column  ">
-      <a class="btn font-weight-bold" style="writing-mode:vertical-lr ;" href="?do=login">會 員 登 入 </a><br>
-      <p>&nbsp&nbsp─────</p>
-      <a class="btn font-weight-bold" style="writing-mode:vertical-lr ;" href="?do=reg">註 冊 會 員</a>
-      <!-- writing-mode:vertical-lr = 水平改垂直書寫 -->
-    </nav>
-
-
-    <?php
-    }
-   ?>
-
-
-  </div>
+</div>
+</nav>
 
   <!-- right end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

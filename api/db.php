@@ -1,8 +1,13 @@
 <?php
-
+    //本機版
     $dsn="mysql:host=localhost;charset=utf8;dbname=mypolling";
     $pdo=new PDO($dsn,'root','');
     session_start();
+
+    //遠端版
+    // $dsn="mysql:host=localhost;charset=utf8;dbname=s1100421";
+    // $pdo=new PDO($dsn,'s1100421','s1100421');
+    // session_start();
 
     //取得符合條件的一筆資料
     function find($table,$id){

@@ -46,12 +46,12 @@
       
 
       <div class="row">
-            <div class="col-xl-12">
+            <div class="col-12">
             <h1 class="text-center font-weight-bold mx-auto text-white">- 會員登入 -</h1>
             </div>    
         </div>
         <div class="row">
-            <div class="col-xl-12">
+            <div class="col-12">
             <h3 class="text-center font-weight-bold mx-auto text-white" > Register</h3>
             </div>              
         </div>
@@ -59,7 +59,7 @@
         <form action="./api/check_login.php" method="post" id="loginForm">
             <div class="row">
                 
-                     <div class="form-inline col-xl-6 text-center mx-auto mt-4">
+                     <div class="form-inline col-6 text-center mx-auto mt-4">
 
                     <!-- 帳號 -->
                     <label for="account" class="label  col-form-label text-white">帳號：
