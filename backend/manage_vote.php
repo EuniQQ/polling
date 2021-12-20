@@ -15,7 +15,7 @@ echo "</h1>";
     <style>
 
         main{
-            border:1px solid red;
+            /* border:1px solid red; */
             width:1000px;
            /*  height:600px; */
            display:flex;
@@ -35,12 +35,12 @@ echo "</h1>";
 
         // echo "<ol class='list-group'>";
            foreach ($subjects as $key => $value) {
-        echo "<div class='card' style='width: 300px;height:600px;'>";
-           //選項圖片
-            echo "<img src='{$value['img_src']}' class='card-img-top' alt=''>";
-             echo "<div class='card-body'>";
-             echo "<h5 class='card-title'> {$value['topic']} </h5>";
-             echo "</div>";
+            echo "<div class='card' style='width:300px;height:620px;'>";
+                //選項圖片
+                echo "<img src='{$value['img_src']}' class='card-img-top'  alt=''>";
+                echo "<div class='card-body'>";
+                echo "<h5 class='card-title' style='height:110px'> {$value['topic']} </h5>";
+                echo "</div>";
            
                //選項票數
                $oopt=q("SELECT `count` as '票數' FROM `options` WHERE `topic_id`='{$value['id']}'"); 
@@ -56,7 +56,7 @@ echo "</h1>";
                //card-body 
                //管理按鈕
             echo "<div class='card-body mx-auto'>";
-               echo "<a href='?do=edit_subject&id={$value['id']}' class='card-link'>";
+               echo "<a href='?do=edit_subject&id={$value['id']}' class='card-link '>";
                echo "<button class='btn btn-primary'>管理</button>";
                echo "</a>";
                //刪除題目   
