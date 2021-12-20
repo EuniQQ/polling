@@ -60,7 +60,7 @@ echo "</h1>";
                echo "<button class='btn btn-primary'>管理</button>";
                echo "</a>";
                //刪除題目   
-               echo "<a href='../index.php?do=vote_result&id=08' class='card-link text-center'>";
+               echo "<a href='?do=del_topic&id={$value['id']}'  class='card-link text-center'>";
                echo "<button class='btn btn-danger'>刪除</button>";
                echo "</a>";
             echo "</div>";

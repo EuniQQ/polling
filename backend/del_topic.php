@@ -1,4 +1,4 @@
-<?php include_once "db.php";?>
+<?php include_once "../api/db.php";?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +17,15 @@
  
 
 <?php
+  
+$id=$_GET['id'];
+del('topics',$id) ;
 
 
-DELETE FROM `topics` WHERE `id` = $_GET['id'];
+to("?do=manage_vote");
 
-to("../backend/index.php");
+
+
 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

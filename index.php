@@ -20,6 +20,7 @@
       width:100vw;
       height: 100vh;
       margin: 0;
+      padding:0;
       background: url(./image/index_img-3.png);
       background-size: cover;
       overflow: hidden;
@@ -45,7 +46,7 @@
 
     .rightBtns{
       position:absolute;
-      top:750px;
+      bottom:50px;
     }
 
   </style>
@@ -77,9 +78,7 @@
   </div>
   <!-- left end -->
 
-
-
-
+  <!-- right -->
   <nav class="right  ">
     <div class="container">
 
@@ -98,7 +97,7 @@
   <!-- 右下角按鈕 -->
   <div class="rightBtns">              
     <?php
-           if($_SESSION['user']=='manager'){
+           if($_SESSION['user']=='admin'){
              ?>
           <a class='btn btn-lg active btn-success mx-3 mt-3' href='backend/index.php'><i class='fas fa-wrench'></i><br>後台</a>
           

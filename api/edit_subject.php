@@ -22,6 +22,8 @@ $options=$_POST['options'];
 $opt_id=$_POST['opt_id'];
 
 //使用迴圈對選項內容進行遍歷
+
+
 foreach ($options as $key => $opt) {
     //判斷選項是否有內容，有則更新，無則刪除
     if($opt!=""){

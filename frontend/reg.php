@@ -61,23 +61,23 @@
                 <div class="form-group col-12 text-center mt-5">
                     <!-- 帳號 -->
                     <label for="account" class="label col-form-label">帳號： 
-                    <input type="text" class="col form-cotrol " id="account" name="account" value="" placeholder="請輸入帳號"><br>
+                    <input type="text" class="col form-cotrol " id="account" name="account" placeholder="請輸入帳號"><br>
                     </label><br>
                     <!-- 密碼 -->
                     <label for="password" class="label  col-form-label ">密碼：
-                    <input type="password" class="col form-cotrol " id="password" name="password" value="" placeholder="請輸入4-8碼中英文"><br>
+                    <input type="password" class="col form-cotrol " id="password" name="password" placeholder="請輸入4-8碼中英文"><br>
                     </label><br>
                     <!-- 姓名 -->
-                    <label for="fname" class="label col-form-label ">姓名：
-                    <input type="text" class="col form-cotrol " id="name" name="name" value=""><br>
+                    <label for="name" class="label col-form-label ">姓名：
+                    <input type="text" class="col form-cotrol " id="name" name="name"><br>
                     </label><br>
                     <!-- 生日 -->
                     <label for="birthday" class="label  col-form-label ">生日：
-                    <input type="date" class="col form-cotrol" id="birthday" name="birthday" value=""><br>
+                    <input type="date" class="col form-cotrol" id="birthday" name="birthday"><br>
                     </label><br>
                     <!-- mail -->
-                    <label for="mail" class="label col-form-label ">電郵：
-                    <input type="email" class="col form-cotrol " id="email" name="email" value=""><br>
+                    <label for="email" class="label col-form-label ">電郵：
+                    <input type="email" class="col form-cotrol " id="email" name="email"><br>
                     </label><br>
                     
 
