@@ -13,10 +13,17 @@ echo "</h1>";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         main{
             border:1px solid red;
-            width:1500px;
-            height:600px;
+            width:1000px;
+           /*  height:600px; */
+           display:flex;
+           flex-wrap:wrap;
+        }
+        .card{
+            padding:5px;
+            margin:10px
         }
     </style>
 </head>
@@ -29,10 +36,11 @@ echo "</h1>";
         // echo "<ol class='list-group'>";
            foreach ($subjects as $key => $value) {
         echo "<div class='card' style='width: 300px;height:600px;'>";
-           echo "<img src='{$value['img_src']}' class='card-img-top' alt=''>";
-           echo "<div class='card-body'>";
-           echo "<h5 class='card-title'> {$value['topic']} </h5>";
-           echo "</div>";
+           //選項圖片
+            echo "<img src='{$value['img_src']}' class='card-img-top' alt=''>";
+             echo "<div class='card-body'>";
+             echo "<h5 class='card-title'> {$value['topic']} </h5>";
+             echo "</div>";
            
                //選項票數
                $oopt=q("SELECT `count` as '票數' FROM `options` WHERE `topic_id`='{$value['id']}'"); 
@@ -57,8 +65,8 @@ echo "</h1>";
                echo "</a>";
             echo "</div>";
             //    echo "</ol>";
-            echo "<br><br>";
-        echo "<div>";    
+            //echo "<br><br>";
+        echo "</div>";    
 
            }          
     ?>

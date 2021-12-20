@@ -17,7 +17,7 @@
     }
 
     body {
-      width: 1920px;
+      width:100vh;
       height: 1080px;
       margin: 0;
       background: url(./image/index_img-3.png);

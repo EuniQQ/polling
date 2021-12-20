@@ -48,39 +48,21 @@
 <div class="container-fruid ">
 
     <div class="row voteTytle mx-auto justify-content-center">
-        <div class="col-2 circle text-center mx-4" style="background-color:rgb(253, 255, 246)">
+        <div class="col-sm-2 circle text-center mx-4" style="background-color:rgb(253, 255, 246)">
             <a href="vote_page.php?id=8" style="color:rgb(73, 60, 3)">重啟<br>核四</a>
         </div>
-        <div class="col-2 circle text-center mx-4" style="background-color:rgb(209, 137, 1)">
+        <div class="col-sm-2 circle text-center mx-4" style="background-color:rgb(209, 137, 1)">
             <a href="vote_page.php?id=9" style="color:rgb(247, 247, 246)">進口<br>萊豬</a>
         </div>
-        <div class="col-2 circle text-center mx-4" style="background-color:rgb(240, 228, 125)">
+        <div class="col-sm-2 circle text-center mx-4" style="background-color:rgb(240, 228, 125)">
             <a href="vote_page.php?id=10" style="color:rgb(121, 59, 2)">大選<br>公投</a>
         </div>
-        <div class="col-2 circle text-center mx-4" style="background-color:rgb(255, 255, 255)">
+        <div class="col-sm-2 circle text-center mx-4" style="background-color:rgb(255, 255, 255)">
             <a href="vote_page.php?id=11" style="color:rgb(44, 65, 1)">保護<br>藻礁</a>
         </div>
     </div>
-    
-<!-- <div class="container-fruid ">
-<div class="row voteTytle d-flex justify-content-center ">
-    <div class="box col-sm-2 circle text-center mx-4 d-inline-block  " style="background-color:rgb(253, 255, 246)">
-        <a href="vote_page.php?id=8" style="color:rgb(73, 60, 3)">重啟<br>核四</a>
-        </div>
-    <div class="box col-sm-2 circle text-center mx-4 d-inline-block " style="background-color:rgb(209, 137, 1)">
-        <a href="vote_page.php?id=9" style="color:rgb(247, 247, 246)">進口<br>萊豬</a>
-    </div>
-    <div class="box col-sm-2 circle text-center mx-4 d-inline-block " style="background-color:rgb(240, 228, 125)">
-        <a href="vote_page.php?id=10" style="color:rgb(121, 59, 2)">大選<br>公投</a>
-    </div>
-    <div class="box col-sm-2 circle text-center mx-4 d-inline-block " style="background-color:rgb(255, 255, 255)">
-        <a href="vote_page.php?id=11" style="color:rgb(44, 65, 1)">保護<br>藻礁</a>
-    </div>
-</div> -->
 
-<h3 class="voteDate text-white text-center mt-5"> 2021.12.01 - 2021.12.24</h3>
-
-
+    <h3 class="voteDate text-white text-center mt-5"> 2021.12.01 - 2021.12.24</h3>
 
 </div>
 
