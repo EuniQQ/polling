@@ -73,9 +73,12 @@
       include "./frontend/show_vote_tytle.php";
       }
       ?>
-      
+     
     </div>
+
   </div>
+
+  
   <!-- left end -->
 
   <!-- right -->
@@ -99,11 +102,13 @@
     <?php
            if($_SESSION['user']=='admin'){
              ?>
-          <a class='btn btn-lg active btn-success mx-3 mt-3' href='backend/index.php'><i class='fas fa-wrench'></i><br>後台</a>
-          
-          <?php
+
+<a class='btn btn-lg active btn-success mx-3 mt-3' href='backend/index.php'><i class='fas fa-wrench'></i><br>後台</a>
+
+<?php
           }
           ?>
+          
           
           <a class="btn btn-lg active btn-warning mx-3 mt-3" href="index.php?do=logout">登出</a> 
           

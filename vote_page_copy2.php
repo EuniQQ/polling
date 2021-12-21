@@ -1,12 +1,6 @@
 
 
-<?php include_once "api/db.php";
-
-
-?>
-
-
-
+<?php include_once "api/db.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,40 +19,47 @@
             *{
                 box-sizing:border-box;
                 margin:0px;
-            }
-            
-            
-                    
+            }                   
         </style>
 </head>
 
 <?php
- 
- 
- $id=$_GET['id'];
- $topicNum=$id-7;
- $subject=find('topics',$id);
- $options=all('options',['topic_id'=>$id]);
+
+            if(isset($_GET['id'])){
+               $id=$_GET['id'];
+               $topicNum=$id-7;
+               $topic=find('topics',$_GET['id']);
 
 
- 
-     if($id==8){
-         $prePage=8; 
-         $nextPage=9;
-     }else if ($id==11) {  
-         $prePage=10;   
-         $nextPage=11; 
-     }else{
-        $nextPage=$id+1;
-        $prePage=$id-1; 
-     }
-   
+                  }else{
+
+                    $subject=all('topics');
+                    foreach($subject as $key => $value){
+                     $id=$value['id'];
+                     $topicNum=$key+1;
+                     $topic=$value['topic'];
+
+                  }
+                }
+
+                  if($_GET['id']==8){
+                     $prePage=8; 
+                     $nextPage=9;
+                  }else if ($_GET['id']==11) {  
+                     $prePage=10;   
+                     $nextPage=11; 
+                  }else{
+                    $nextPage=$id+1;
+                    $prePage=$id-1;
+                  }
+            
+    
  ?>
 
 <body>
 
         <!-- 上半段 -->
-<div class="section container-fruid   ">
+<div class="section container-fruid ">
     <div class="row  d-flex  justify-content-between  align-items-center text-center " >
         <!-- 上一頁連結 -->
         
@@ -74,7 +75,8 @@
            <p class="text-center font-weight-bold" style="font-size:60px ;margin-top:140px"><?= $topicNum ?></p><br>
            <!-- 內文 -->
            <h2 class="font-weight-bold mx-auto" style="width:400px; size:40px; line-height:200%; margin-top:-40px;">
-           <?=$subject['topic'];?></h2>
+           <?= $topic ?>
+           </h2>
         </div>
        
         <!-- 下一頁連結 -->
@@ -85,10 +87,18 @@
     </div>
 </div>  
       
-      
+     
 
         <!-- 下半段   -->
         <!-- 答案鍵 -->
+<?php
+
+$options=all('options',['topic_id'=>$id]);
+
+?>
+
+
+
 <div class="container-fruid footer  "> 
     <div class="row ">
         <!-- <div class="col-12 "> -->

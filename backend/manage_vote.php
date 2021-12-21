@@ -37,7 +37,7 @@ echo "</h1>";
            foreach ($subjects as $key => $value) {
             echo "<div class='card' style='width:300px;height:620px;'>";
                 //選項圖片
-                echo "<img src='{$value['img_src']}' class='card-img-top'  alt=''>";
+                echo "<img src='../{$value['img_src']}' class='card-img-top'  alt=''>";
                 echo "<div class='card-body'>";
                 echo "<h5 class='card-title' style='height:110px'> {$value['topic']} </h5>";
                 echo "</div>";

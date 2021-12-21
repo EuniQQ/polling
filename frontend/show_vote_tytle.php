@@ -62,7 +62,9 @@
         </div>
     </div>
 
-    <h3 class="voteDate text-white text-center mt-5"> 2021.12.01 - 2021.12.24</h3>
+    <h3 class="voteDate text-white text-center mt-5"> 2021.12.01 - 2021.12.24
+         <a class="btn btn-outline-warning  " href="index.php?do=show_vote_list">所有投票選單</a> </h3>
+   
 
 </div>
 

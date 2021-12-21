@@ -1,6 +1,4 @@
 <!-- 投票列表 -->
-<h1>投票結果</h1>
-
 <?php
 $subjects=all('topics');
 echo "<ol class='list-group'>";
@@ -10,7 +8,7 @@ foreach ($subjects as $key => $value) {
     //題目
     //有登入的會員才能使用投票功能
     if(isset($_SESSION['user'])){
-        echo "<a class='d-inline-block col-md-8' href='index.php?do=vote&id={$value['id']}'>";
+        echo "<a class='d-inline-block col-md-8' href='vote_page.php?id={$value['id']}'>";
         echo $value['topic'];
         echo "</a>";
     }else{

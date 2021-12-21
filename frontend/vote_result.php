@@ -52,7 +52,8 @@
                 <div class="modal-footer ">
                   <a href="#" class="btn">Close</a>
                   <a href="index.php" class="btn btn-primary">HOME</a>
-                  <a href="?do=show_vote_list" class="btn btn-primary">其他選舉結果</a>
+                  <!-- <a href="?do=show_vote_list" class="btn btn-primary">其他選舉結果</a> -->
+                  <a href="allResults.php" class="btn btn-primary">其他選舉結果</a>
                 </div>
     </div>
 </div>
