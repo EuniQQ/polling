@@ -61,12 +61,11 @@
         <!-- 上半段 -->
 <div class="section container-fruid ">
     <div class="row  d-flex  justify-content-between  align-items-center text-center " >
-        <!-- 上一頁連結 -->
         
- 
-        <div class="col-sm-1 float-left">
+        <!-- 上一頁連結 --> 
+        <!-- <div class="col-sm-1 float-left">
             <a href="vote_page.php?id=<?=$prePage;?>" class="fas fa-angle-left fa-5x" style='color:gray'  role="button"></a>
-        </div>       
+        </div>        -->
         
        
         <!-- 標題 -->
@@ -80,9 +79,10 @@
         </div>
        
         <!-- 下一頁連結 -->
-          <div class="col-sm-1 float-right">
+          <!-- <div class="col-sm-1 float-right">
               <a href="vote_page.php?id=<?=$nextPage;?>" class="fas fa-angle-right fa-5x" style='color:gray' role="button"></a> 
-          </div>       
+          </div>        -->
+
       <!-- 上半段結束 -->
     </div>
 </div>  

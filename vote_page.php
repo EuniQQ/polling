@@ -36,22 +36,22 @@
  
  
  $id=$_GET['id'];
- $topicNum=$id-7;
  $subject=find('topics',$id);
+ $topicNum=$id-7;
  $options=all('options',['topic_id'=>$id]);
 
 
- 
-     if($id==8){
-         $prePage=8; 
-         $nextPage=9;
-     }else if ($id==11) {  
-         $prePage=10;   
-         $nextPage=11; 
-     }else{
-        $nextPage=$id+1;
-        $prePage=$id-1; 
-     }
+//  頁面切換原則
+    //  if($id==8){
+    //      $prePage=8; 
+    //      $nextPage=9;
+    //  }else if ($id==11) {  
+    //      $prePage=10;   
+    //      $nextPage=11; 
+    //  }else{
+    //     $nextPage=$id+1;
+    //     $prePage=$id-1; 
+    //  }
    
  ?>
 
@@ -60,16 +60,15 @@
         <!-- 上半段 -->
 <div class="section container-fruid   ">
     <div class="row  d-flex  justify-content-between  align-items-center text-center " >
-        <!-- 上一頁連結 -->
         
- 
-        <div class="col-sm-1 float-left">
+    <!-- 上一頁連結 -->
+        <!-- <div class="col-sm-1 float-left">
             <a href="vote_page.php?id=<?=$prePage;?>" class="fas fa-angle-left fa-5x" style='color:gray'  role="button"></a>
-        </div>       
+        </div>        -->
         
        
         <!-- 標題 -->
-        <div class="col-sm-5">   
+        <div class="col-sm-12">   
            <!-- 題數  -->
            <p class="text-center font-weight-bold" style="font-size:60px ;margin-top:140px"><?= $topicNum ?></p><br>
            <!-- 內文 -->
@@ -78,9 +77,10 @@
         </div>
        
         <!-- 下一頁連結 -->
-          <div class="col-sm-1 float-right">
+          <!-- <div class="col-sm-1 float-right">
               <a href="vote_page.php?id=<?=$nextPage;?>" class="fas fa-angle-right fa-5x" style='color:gray' role="button"></a> 
-          </div>       
+          </div>  -->
+
       <!-- 上半段結束 -->
     </div>
 </div>  
@@ -115,7 +115,9 @@
                 
                 <div class="clearfix">
                     <div class="text-white mx-5 mt-5 float-right mr-0" style="font-size:30px ">
-                        <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
+                        <i class="fas fa-home mr-5"><a href="index.php" style="color:white">回首頁</a></i>
+                        <i class="fas fa-file-alt"><a href="?do=show_vote_list" style="color:white"> 回投票列表</a></i>
+
                     </div>  
                 </div>  
           
