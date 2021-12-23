@@ -2,8 +2,12 @@
 <?php include_once "db.php";?>
 
 <?php
+$sub_id=all('topics','id');
+    $id=max($sub_id); 
+ 
+
 //接收由URL傳過來的題目id值
-$id=$_GET['id'];
+// $id=$_GET['id'];
 
 //執行新增空白選項紀錄，並紀錄此選項為主題$id的選項
 insert('options',['opt'=>"",'topic_id'=>$id]);

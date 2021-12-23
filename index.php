@@ -100,6 +100,7 @@
   <!-- 右下角按鈕 -->
   <div class="rightBtns">              
     <?php
+          //  fide('users','id')
            if($_SESSION['user']=='admin'){
              ?>
 

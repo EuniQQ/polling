@@ -46,9 +46,11 @@
         }
 
         .row {
-            margin-top: 200px;
+            margin-top: 50px;
             display:flex;
             flex-flow:row nowrap;
+            
+
         }
 
         .circle:hover {
@@ -58,23 +60,32 @@
             left: 3px;
         }
 
-        .container{
-            border: 1px solid red;
-            
+        .box{
+            display:inline-block;
         }
+
+        .title{
+            margin-top: 150px;
+        }
+       
     </style>
 </head>
 
 <body>
+        <div class="title text-center mx-auto ">
+            <h1>新增表單</h1>
+            <h5>請依序點選完成新增表單步驟</h5>
+        </div>
+
     <div class="container">
-        <div class="row d-flex justify-content-center">
+        <div class="row justify-content-center">
 
             <!-- modal-1 設定主題 -->
-            <div class="col-2">
-                <button type="button" class="btn btn-circle text-light" data-toggle="modal" data-target="#Modal_1"
-                        class="circle text-center mx-3"  style="background-color:rgb(187,177,147);">
+            <div class="box mx-3">
+            <button type="button" class="btn btn-circle text-light" data-toggle="modal" data-target="#Modal_1"
+                        class="circle text-center "  style="background-color:rgb(187,177,147);">
                     設定<br>主題
-                </button>
+                </button> 
                 <form action="../api/new_subject.php" method='post'>
                     <!-- The Modal -->
                     <div class="modal" id="Modal_1">
@@ -94,21 +105,21 @@
 
                                 </div>
                             </div>
-                        </div>
+                    
+                        </div>  
+                    </div>  
                 </form>
             </div>
-
             <!-- modal-1 end -->
 
-
-            <div class="col-1">
+            <div class="box mx-3">
                 <i class="fas fa-caret-right fa-3x mt-5 text-secondary"></i>
             </div>
 
             <!-- modal-2 增加照片 -->
-            <div class="col-2">
+            <div class="box">
                 <button type="button" class="btn btn-circle text-light" data-toggle="modal" data-target="#Modal_2"
-                    class=" circle text-center mx-3 " style="background-color:rgb(194, 148, 138);">
+                    class=" circle text-center  " style="background-color:rgb(194, 148, 138);">
                     選擇<br>照片
                 </button>
                 <form action="../api/upload_ad.php" method='post' class='col-6 m-auto'>
@@ -140,41 +151,69 @@
             </div>
                 <!-- modal-2 end -->
 
-            <div class="col-1">
-                <i class="fas fa-caret-right fa-3x mt-5 text-secondary"></i>
+                <div class="box mx-3 mt-5">
+                <i class="fas fa-caret-right fa-3x text-secondary"></i>
             </div>
 
-
+                   
 
                 <!-- modal-3 增加選項 -->
-                <div class="col-2">
-                    <button type="button" class="btn btn-circle text-light" data-toggle="modal" data-target="#myModal1"
-                        class="col-2 circle text-center mx-3 " style="background-color:rgb(201, 189, 78);">
+                <div class="box mx-3">
+                    <button type="button" class="btn btn-circle text-light" data-toggle="modal" data-target="#Modal_3"
+                        class="col-2 circle text-center  " style="background-color:rgb(201, 189, 78);">
                         新增<br>選項
                     </button>
 
                     <!-- The Modal -->
-                <!-- 新增選項內容 -->
-                </div>
+                    <form action="../api/upload_ad.php" method='post' class='col-6 m-auto'>
+                    <!-- The Modal -->
+                    <div class="modal" id="Modal_3">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">新增選項：</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body bg-light">
+                                    <?=include "./edit_subject_forModal.php";?>
+                                    <div class='custom-file mx-auto d-block mb-2'>
+                                     
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+ 
                     <!-- modal-3 end -->
 
-                <div class="col-1">
-                    <i class="fas fa-caret-right fa-3x mt-5 text-secondary"></i>
+
+                <div class="box mx-3 mt-5">
+                    <i class="fas fa-caret-right fa-3x text-secondary"></i>
                 </div>
 
-                <!-- modal-4 回到後台 -->
-                    <div class="col-2">
+                
+
+                 <!-- modal-4 回到後台 -->
+                 <div class="box mx-3">
                         <button type="button" class="btn btn-circle text-light" data-toggle="modal"
-                            data-target="#myModal1" class="col-2 circle text-center mx-3 "
+                            data-target="#myModal1" class="col-2 circle text-center"
                             style="background-color:rgb(126, 168, 190);">
                             回到<br>後台
                         </button>
                     </div>
                 <!-- modal-4 end -->
+          
 
             
 
-        </div>
+        <!-- </div> -->
 
 
 

@@ -17,8 +17,9 @@ if(!empty($_FILES['name']['tmp_name'])){
 
 }
 
+
 //新增完畢，導回新增表單頁
-to("../backend/index.php?do=add_subject_form");
+// to("../backend/index.php?do=add_subject_form");
 
 
 
