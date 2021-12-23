@@ -1,12 +1,6 @@
 
 
-<?php include_once "api/db.php";
-
-
-?>
-
-
-
+<?php include_once "api/db.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,53 +14,55 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
         <link rel="stylesheet" href="./css/vote_page_style.css">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
         <style>
             *{
                 box-sizing:border-box;
                 margin:0px;
-            }
-            
-            
-                    
+            }                   
         </style>
 </head>
 
 <?php
 
- 
- 
- $id=$_GET['id'];
- $subject=find('topics',$id);
- $topicNum=$id-7;
- $options=all('options',['topic_id'=>$id]);
+            
+               
+               
+               $topic=find('topics',$_GET['id']);
 
+                    $subject=all('topics');
+                    foreach($subject as $key => $value){
+                     $id=$_GET['id'];
+                     $topicNum=$value[key]+1;
+                     $topic=$value['topic'];
 
- //頁面切換原則
-     if($id==8){
-         $prePage=8; 
-         $nextPage=9;
-     }else if ($id==11) {  
-         $prePage=10;   
-         $nextPage=11; 
-     }else{
-        $nextPage=$id+1;
-        $prePage=$id-1; 
+                  }
+              
 
-
-     }
-   
+                  if($_GET['id']==8){
+                     $prePage=8; 
+                     $nextPage=9;
+                  }else if ($_GET['id']==11) {  
+                     $prePage=10;   
+                     $nextPage=11; 
+                  }else{
+                    $nextPage=$id+1;
+                    $prePage=$id-1;
+                  }
+            
+    
  ?>
+
 <body>
 
         <!-- 上半段 -->
-<div class="section container-fruid   ">
+<div class="section container-fruid ">
     <div class="row  d-flex  justify-content-between  align-items-center text-center " >
         
-    <!-- 上一頁連結 -->
-        <div class="col-sm-1 float-left">
+        <!-- 上一頁連結 --> 
+        <!-- <div class="col-sm-1 float-left">
             <a href="vote_page.php?id=<?=$prePage;?>" class="fas fa-angle-left fa-5x" style='color:gray'  role="button"></a>
-        </div>       
+        </div>        -->
         
        
         <!-- 標題 -->
@@ -75,22 +71,31 @@
            <p class="text-center font-weight-bold" style="font-size:60px ;margin-top:140px"><?= $topicNum ?></p><br>
            <!-- 內文 -->
            <h2 class="font-weight-bold mx-auto" style="width:400px; size:40px; line-height:200%; margin-top:-40px;">
-           <?=$subject['topic'];?></h2>
+           <?= $topic ?>
+           </h2>
         </div>
        
         <!-- 下一頁連結 -->
-          <div class="col-sm-1 float-right">
+          <!-- <div class="col-sm-1 float-right">
               <a href="vote_page.php?id=<?=$nextPage;?>" class="fas fa-angle-right fa-5x" style='color:gray' role="button"></a> 
-          </div> 
+          </div>        -->
 
       <!-- 上半段結束 -->
     </div>
 </div>  
       
-      
+     
 
         <!-- 下半段   -->
         <!-- 答案鍵 -->
+<?php
+
+$options=all('options',['topic_id'=>$id]);
+
+?>
+
+
+
 <div class="container-fruid footer  "> 
     <div class="row ">
         <!-- <div class="col-12 "> -->
@@ -117,9 +122,7 @@
                 
                 <div class="clearfix">
                     <div class="text-white mx-5 mt-5 float-right mr-0" style="font-size:30px ">
-                        <i class="fas fa-home mr-5"><a href="index.php" style="color:white">回首頁</a></i>
-                        <i class="fas fa-file-alt"><a href="?do=show_vote_list" style="color:white"> 回投票列表</a></i>
-
+                        <i class="fas fa-home "><a href="index.php" style="color:white">回首頁</a></i>
                     </div>  
                 </div>  
           

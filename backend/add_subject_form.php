@@ -4,7 +4,11 @@
 
     <!-- <input type="file" name="topc_img" value="topc_img"  > -->
 
+<<<<<<< HEAD
+<!DOCTYPE html>
+=======
     <!DOCTYPE html>
+>>>>>>> 799a53c6751bc1f663ac8e44ca4838bd5ce2ddc9
 <html lang="en">
 
 <head>

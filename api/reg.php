@@ -9,4 +9,6 @@ insert('users',$_POST);
 //新增完畢導向回首頁
 to("../index.php");
 
+
+// dd($_POST);
 ?>

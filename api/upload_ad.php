@@ -9,7 +9,7 @@ if(!empty($_FILES['name']['tmp_name'])){
     //取得上傳檔案的原始檔名
     $filename=$_FILES['name']['name'];
 
-    //將檔案從暫存路徑搬移至指定路徑
+    //搬移上傳的圖片檔至指定的目錄下
     move_uploaded_file($_FILES['name']['tmp_name'],'../image/'.$filename);
 
     //使用insert自訂函式來完成新增廣告圖片的動作
