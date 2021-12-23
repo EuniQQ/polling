@@ -12,7 +12,7 @@ $topic=['topic'=>$_POST['subject']];
 insert('topics',$topic);
 
 
-//新增完畢，導向回後台首頁
-to("../backend");
+//新增完畢，導回新增表單頁
+to("../backend/index.php?do=add_subject_form");
 
 ?>
