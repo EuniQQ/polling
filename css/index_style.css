@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url(../image/index_img-3.png);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .left {
+    /* flex-basis: 1800px; */
+    flex-basis: 95%;
+    height: 1080px;
+
+  }
+
+  .right {
+    flex-basis: calc(100% - 95%);
+    /* flex-basis: calc(100% - 1800px); */
+    height: 1080px;
+  }
+
+  .welcome {
+    writing-mode: vertical-lr;
+    font-size: 25px;
+  }
+
+  .rightBtns {
+    position: absolute;
+    bottom: 50px;
+  }

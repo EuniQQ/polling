@@ -18,12 +18,10 @@
     <div class="row">
         <div class="modal hide fade" id="myModal">
             <div class="modal-header text-center">
-               
+            
                 <?php
-                    $sql="select * 
-                      from `topics`,
-                           `options` 
-                      where `topics`.`id`=`options`.`topic_id` AND 
+                    $sql="SELECT * FROM `topics`,`options` 
+                        WHERE `topics`.`id`=`options`.`topic_id` AND 
                             `topics`.`id`='{$_GET['id']}'";
                 
                 //任意查詢函式
@@ -31,8 +29,8 @@
                 ?>
 
                 <h2 class="text-warning bg-dark p-3 " style="border-radius:15px"> 投票<br>結果<br></h2>
-                <h2 class="text-white float-left"><?=$rows[0]['topic'];?></h2>
-                 
+                <h2 class="text-white float-left m-5" style="line-height:50px"><?=$rows[0]['topic'];?></h2>
+                
             </div>
             <div class="modal-body">
                 
@@ -50,10 +48,10 @@
                 </ol>
             </div>
                 <div class="modal-footer ">
-                  <a href="#" class="btn">Close</a>
-                  <a href="index.php" class="btn btn-primary">HOME</a>
-                  <!-- <a href="?do=show_vote_list" class="btn btn-primary">其他選舉結果</a> -->
-                  <a href="allResults.php" class="btn btn-primary">其他選舉結果</a>
+                    <a href="#" class="btn">Close</a>
+                    <a href="index.php" class="btn btn-primary">HOME</a>
+                    <!-- <a href="?do=show_vote_list" class="btn btn-primary">其他選舉結果</a> -->
+                    <a href="allResults.php" class="btn btn-primary">其他選舉結果</a>
                 </div>
     </div>
 </div>
