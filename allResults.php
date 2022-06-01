@@ -51,34 +51,34 @@ include_once "./api/db.php";
 
                 
 <main class="ml-5">
-      
+        
     <?php
         $subjects=all('topics');
 
         // echo "<ol class='list-group'>";
-           foreach ($subjects as $key => $value) {
+            foreach ($subjects as $key => $value) {
             echo "<div class='card bg-light mx-auto' style='width:300px;height:550px;'>";
                 //選項圖片
                 echo "<img src='./image/{$value['img_src']}' class='card-img-top'  alt=''>";
                 echo "<div class='card-body'>";
                 echo "<h5 class='card-title' style='height:110px'> {$value['topic']} </h5>";
                 echo "</div>";
-           
+            
                //選項票數
-               $oopt=q("SELECT `count` as '票數' FROM `options` WHERE `topic_id`='{$value['id']}'"); 
-               echo "<ul class='list-group list-group-flush'>";
-               echo "<li class='list-group-item text-center'> 同意&nbsp {$oopt[0]['票數']} &nbsp票 </li>";
-               echo "<li class='list-group-item text-center'> 不同意&nbsp {$oopt[1]['票數']} &nbsp票 </li>";
-                       
+                $oopt=q("SELECT `count` as '票數' FROM `options` WHERE `topic_id`='{$value['id']}'"); 
+                echo "<ul class='list-group list-group-flush'>";
+                echo "<li class='list-group-item text-center'> 同意&nbsp {$oopt[0]['票數']} &nbsp票 </li>";
+                echo "<li class='list-group-item text-center'> 不同意&nbsp {$oopt[1]['票數']} &nbsp票 </li>";
+
                //總投票數顯示
-               $count=q("SELECT sum(`count`) as '總計' FROM `options` WHERE `topic_id`='{$value['id']}'");        
-               echo "<li class='list-group-item text-center font-weight-bold text-primary'>總計&nbsp {$count[0]['總計']} &nbsp票 </li>";  
-               echo "</ul>";
-           
-          
+                $count=q("SELECT sum(`count`) as '總計' FROM `options` WHERE `topic_id`='{$value['id']}'");        
+                echo "<li class='list-group-item text-center font-weight-bold text-primary'>總計&nbsp {$count[0]['總計']} &nbsp票 </li>";  
+                echo "</ul>";
+            
+            
         echo "</div>";    
 
-           }          
+            }          
     ?>
 
 </main>

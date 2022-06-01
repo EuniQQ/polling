@@ -16,13 +16,13 @@
 
   .left {
     /* flex-basis: 1800px; */
-    flex-basis: 95%;
+    flex-basis: 93%;
     height: 1080px;
 
   }
 
   .right {
-    flex-basis: calc(100% - 95%);
+    flex-basis: calc(100% - 93%);
     /* flex-basis: calc(100% - 1800px); */
     height: 1080px;
   }

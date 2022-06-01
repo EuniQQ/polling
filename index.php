@@ -21,7 +21,7 @@
     <div class="container">
 
       <?php
-      //根據網址帶的do參數內容來決定要include那一個檔案內容
+      //根據網址的do參數內容決定要include的檔案
       $do = (isset($_GET['do'])) ? $_GET['do'] : 'show_vote_tytle';
 
       //建立要引入的檔案路徑
@@ -51,7 +51,7 @@
         echo "<span class='text-danger'>" . $_SESSION['error'] . "</span>";
       }
 
-      //判斷是否有登入的紀錄，根據登入狀況，顯示不同的功能按鈕
+      //判斷是否有登入紀錄，根據登入狀況，顯示不同的功能按鈕
       if (isset($_SESSION['user'])) {
         echo "<span class=' welcome px-3 mt-5'>歡迎！{$_SESSION['user']}</span>";
       ?>
@@ -60,7 +60,7 @@
         <!-- 右下角按鈕 -->
         <div class="rightBtns">
           <?php
-          //  fide('users','id')
+          
           if ($_SESSION['user'] == 'admin') {
           ?>
 

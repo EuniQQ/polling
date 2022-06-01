@@ -92,6 +92,7 @@ if ($id == 8) {
                             <?php
                             foreach ($options as $key => $opt) {
                                 echo "<label class='form-check-label mr-5 mt-3 ' >";
+                                // class qq 用於下方jq
                                 echo "<input type='radio' id='{$opt['id']}' name='opt' value='{$opt['id']}' class='qq form-check-input mx-auto mt-3'>&nbsp{$opt['opt']}";
                                 echo "</label>";
                             }
@@ -101,10 +102,10 @@ if ($id == 8) {
                         <input type='button' value='送出投票' onclick='confirm()' class='btn  btn-warning  button  mt-5 mx-3 font-weight-bold'>
                             
                             
-                        <div class="clearfix">
+                        <div class="clearfix" style="float:right">
                             <div class="text-white mx-5 mt-5 float-right mr-0" style="font-size:30px ">
                                 <i class="fas fa-home mr-5"><a href="index.php" style="color:white"> 回首頁</a></i>
-                                <i class="fas fa-file-alt"><a href="?do=show_vote_list" style="color:white"> 回投票列表</a></i>
+                                <!-- <i class="fas fa-file-alt"><a href="?do=show_vote_list" style="color:white"> 回投票列表</a></i> -->
 
                             </div>
                         </div>
