@@ -17,7 +17,7 @@ $opt_id=$_POST['opt'];
     //使用update自訂函式來更新選項紀錄
     //function update($table,$column,$where){
     update('options',['count'=>$opt['count']],['id'=>$opt_id]);
-   
+        
     //完成投票紀錄，導向回投票結果頁並帶上主題的id
     to("../index.php?do=vote_result&id={$opt['topic_id']}");
 

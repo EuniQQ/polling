@@ -112,10 +112,10 @@ if ($id == 8) {
 
 
                     </div>
-                </form>
+                <!-- </form> -->
 
 
-                <!-- </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -127,9 +127,9 @@ if ($id == 8) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
         <script>
         function confirm(){
-           //用:checked可以用來選中被選中的項目
+           //以:checked選中被選中的項目
         let opt=$(".qq:checked").val();
-          //如果都沒有選取的話,console.log會得到undefined的結果
+          //若都沒有選取,console.log會得到undefined的結果
         console.log(opt);
         
         if(opt==undefined){

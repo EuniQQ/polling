@@ -55,11 +55,11 @@
             <h3 class="text-center font-weight-bold mx-auto text-white" > Register</h3>
             </div>              
         </div>
-           
+    
         <form action="./api/check_login.php" method="post" id="loginForm">
             <div class="row">
                 
-                     <div class="form-inline col-6 text-center mx-auto mt-4">
+                    <div class="form-inline col-6 text-center mx-auto mt-4">
 
                     <!-- 帳號 -->
                     <label for="account" class="label  col-form-label text-white">帳號：
@@ -68,17 +68,17 @@
                     <!-- 密碼 -->
                     <label for="password" class="label col-form-label mt-5 text-white">密碼：
                     <input type="password" class="col form-cotrol " id="password" name="password" value="" placeholder="&nbsp;&nbsp;Enter password"></label>
- 
-                     </div>
-                 
+
+                    </div>
+
             </div>
-   
+
                 <!-- 送出表單 -->
                 <div class="form-group text-center mt-5">
                     <button type="reset" class="btn btn-outline-light mr-5 btn-lg">忘記密碼</button>
                     <button type="submit" class="btn btn-warning btn-lg"><a href="./login.php"></a>&nbsp;&nbsp;登入&nbsp;&nbsp;</button>
                 </div>
-  
+
         </form>
     </div>
    
