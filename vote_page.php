@@ -105,7 +105,7 @@ if ($id == 8) {
                         <div class="clearfix" style="float:right">
                             <div class="text-white mx-5 mt-5 float-right mr-0" style="font-size:30px ">
                                 <i class="fas fa-home mr-5"><a href="index.php" style="color:white"> 回首頁</a></i>
-                                <!-- <i class="fas fa-file-alt"><a href="?do=show_vote_list" style="color:white"> 回投票列表</a></i> -->
+                                <i class="fas fa-file-alt"><a href="index.php?do=show_vote_list" style="color:white"> 所有投票列表</a></i>
 
                             </div>
                         </div>
