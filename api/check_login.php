@@ -1,10 +1,24 @@
-確認登入
+<!-- 確認登入 -->
 <?php include_once "db.php";
-
-//先檢查是否有錯誤訊息遺留，有則刪除
 if(isset($_SESSION['error'])){
     unset($_SESSION['error']);
 }
+
+$acc=$_POST['account'];
+$pw=$_POST['password'];
+print_r($_POST);
+
+//function rows($table,$array){
+if(rows('users',$_POST)>0){
+    echo 1;
+}else{
+    echo 0;
+}
+
+$_SESSION['user']=$_POST['account'];
+
+/*
+//先檢查是否有錯誤訊息遺留，有則刪除
 
 //使用rows自訂函式來計算資料表中是否有符合帳號密碼的資料
 //有則表示帳密正確，無則表示帳密有錯
@@ -26,6 +40,6 @@ if(rows('users',$_POST)>0){
 }
 
 ?>
-
+*/
 
 

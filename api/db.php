@@ -21,7 +21,7 @@
             
             $sql=$sql. implode(" AND ",$tmp);
         }else{
-           $sql=$sql . "`id`='$id'";
+            $sql=$sql . "`id`='$id'";
         }
 
         return $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
@@ -92,11 +92,11 @@ function all($table,...$arg){
  }
 
 
- function insert($table,$array){
-     global $pdo;
+    function insert($table,$array){
+        global $pdo;
 
 
-     $sql="INSERT into $table(`" . implode('`,`',array_keys($array)) . "`) 
+    $sql="INSERT into $table(`" . implode('`,`',array_keys($array)) . "`) 
                         value('" . implode("','",$array) ."')";
 
     echo $sql."<br>";
